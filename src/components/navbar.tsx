@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BiMoon, BiSearch, BiSun } from "react-icons/bi";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -7,7 +7,8 @@ const Navbar = () => {
     const [isDark, setIsDark] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
-    const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+    const [scrolled, setScrolled] = useState(false);
+    const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
     const toggleDark = () => {
         setIsDark(!isDark);
@@ -28,15 +29,28 @@ const Navbar = () => {
         setDropdownTimeout(timeout);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > window.innerHeight * 0.15);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const navLink =
-        "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 active:text-blue-700 dark:active:text-blue-300 font-medium transition-colors";
+        "text-emerald-400 dark:text-emerald-400 hover:text-green-400 dark:hover:text-green-600 dark:hover:text-blue-400 dark:active:text-blue-300 font-medium transition-colors";
 
     return (
-        <nav className="fixed z-20 w-full bg-white dark:bg-gray-900 shadow-md dark:shadow-lg transition-colors duration-300">
+        <nav
+            className={`fixed z-20 w-full transition-all duration-300 ${scrolled
+                    ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-lg"
+                    : "bg-transparent"
+                }`}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 dark: text-white">
+                    <div className="flex-shrink-0 dark: text-emerald-600">
                         {/* <img src="/logo.png" alt="Logo" className="h-10" /> */}
                         <h2>Dr.Chiller</h2>
                     </div>
@@ -188,12 +202,11 @@ const Navbar = () => {
                     <NavLink
                         to="/contact-us"
                         className={({ isActive }) =>
-                            `block ${navLink} flex items-center gap-1 ${
-                                isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""
+                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""
                             }`
                         }
                     >
-                        <BiSearch className="mt-1" size={18} /> Contact
+                        Contact Us
                     </NavLink>
 
                     <NavLink to="/search" className={`block ${navLink} flex items-center gap-1`}>

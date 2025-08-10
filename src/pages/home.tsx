@@ -1,9 +1,13 @@
-import Hero from "../components/hero";
+import Choose from "../components/home/choose";
+import Hero from "../components/home/hero";
+import Offers from "../components/home/offers";
 
 const Home = () => {
     return (
-        <div className="pt-8">
+        <div>
             <Hero/>
+            <Choose />
+            <Offers />
         </div>
     )
 }
