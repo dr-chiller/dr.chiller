@@ -62,7 +62,7 @@ const Services = () => {
     return (
         <section
             ref={sectionRef}
-            className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-950 transition-colors duration-300"
+            className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
         >
             <div
                 className={`max-w-7xl mx-auto text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -82,16 +82,16 @@ const Services = () => {
                     navigation
                     pagination={{ clickable: true }}
                     breakpoints={{
-                        320: { slidesPerView: 1.5 },
-                        640: { slidesPerView: 2.5 },
-                        768: { slidesPerView: 3.5 },
-                        1024: { slidesPerView: 4.5 },
+                        320: { slidesPerView: 1.2 },
+                        640: { slidesPerView: 2.2 },
+                        768: { slidesPerView: 3.2 },
+                        1024: { slidesPerView: 4.2 },
                     }}
                 >
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>
                             <div
-                                className={`bg-gray-100 dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col h-[400px] ${isVisible
+                                className={`bg-gray-100 dark:bg-gray-950 rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col h-[400px] ${isVisible
                                         ? "animate-[fadeInUp_0.8s_ease-out_forwards]"
                                         : "opacity-0"
                                     }`}

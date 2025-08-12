@@ -38,7 +38,7 @@ const Navbar = () => {
     }, []);
 
     const navLink =
-        "text-emerald-400 dark:text-emerald-400 hover:text-green-400 dark:hover:text-green-600 dark:hover:text-green-400 dark:active:text-green-300 font-medium transition-colors";
+        "text-emerald-500 dark:text-emerald-400 hover:text-emerald-400 dark:hover:text-emerald-500 font-medium transition-colors";
 
     return (
         <nav
@@ -50,8 +50,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 dark:text-emerald-600">
-                        {/* <img src="/logo.png" alt="Logo" className="h-10" /> */}
+                    <div className="flex-shrink-0 dark:text-emerald-400 text-emerald-600">
                         <h2>Dr.Chiller</h2>
                     </div>
 
@@ -78,7 +77,7 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "font-semibold" : ""}`
+                                `${navLink} ${isActive ? "font-semibold text-green-400 dark:text-green-400" : ""}`
                             }
                         >
                             Home
@@ -87,7 +86,7 @@ const Navbar = () => {
                         <NavLink
                             to="/about-us"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "font-semibold" : ""}`
+                                `${navLink} ${isActive ? "font-semibold text-green-400 dark:text-green-400" : ""}`
                             }
                         >
                             About Us
@@ -127,15 +126,25 @@ const Navbar = () => {
                         <NavLink
                             to="/rentals"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                                `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
                             }
                         >
                             Rentals
                         </NavLink>
+
+                        <NavLink
+                            to="/services"
+                            className={({ isActive }) =>
+                                `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
+                            }
+                        >
+                            Services
+                        </NavLink>
+
                         <NavLink
                             to="/contact-us"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                                `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
                             }
                         >
                             Contact Us
@@ -166,7 +175,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden px-4 py-4 space-y-3 dark:text-white bg-white dark:bg-gray-900">
+                <div className="md:hidden px-4 py-4 space-y-3 bg-white dark:bg-gray-900">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -189,7 +198,7 @@ const Navbar = () => {
                     <div className="block">
                         <details className="group">
                             <summary className={`${navLink} cursor-pointer`}>Products</summary>
-                            <ul className="ml-4 mt-2 space-y-2 text-emerald-400">
+                            <ul className="ml-4 mt-2 space-y-2">
                                 {[
                                     "Water Chillers",
                                     "Cold Rooms",
@@ -199,7 +208,10 @@ const Navbar = () => {
                                     "Swimming Pool Heat Pump",
                                     "Spare parts",
                                 ].map((item, index) => (
-                                    <li key={index} className="text-sm text-gray-800 dark:text-gray-200">
+                                    <li
+                                        key={index}
+                                        className="text-sm text-gray-800 dark:text-gray-200"
+                                    >
                                         {item}
                                     </li>
                                 ))}
@@ -208,10 +220,25 @@ const Navbar = () => {
                     </div>
 
                     <NavLink
+                        to="/services"
+                        className={({ isActive }) =>
+                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                        }
+                    >
+                        Services
+                    </NavLink>
+                    <NavLink
+                        to="/rentals"
+                        className={({ isActive }) =>
+                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                        }
+                    >
+                        Rentals
+                    </NavLink>
+                    <NavLink
                         to="/contact-us"
                         className={({ isActive }) =>
-                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""
-                            }`
+                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
                         }
                     >
                         Contact Us
@@ -220,6 +247,7 @@ const Navbar = () => {
             )}
         </nav>
     );
+
 };
 
 export default Navbar;
