@@ -31,32 +31,40 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight * 0.15);
+            setScrolled(window.scrollY > window.innerHeight * 0.05);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const navLink =
-        "text-emerald-400 dark:text-emerald-400 hover:text-green-400 dark:hover:text-green-600 dark:hover:text-blue-400 dark:active:text-blue-300 font-medium transition-colors";
+        "text-emerald-400 dark:text-emerald-400 hover:text-green-400 dark:hover:text-green-600 dark:hover:text-green-400 dark:active:text-green-300 font-medium transition-colors";
 
     return (
         <nav
             className={`fixed z-20 w-full transition-all duration-300 ${scrolled
-                    ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-lg"
-                    : "bg-transparent"
+                ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-lg"
+                : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="flex-shrink-0 dark: text-emerald-600">
+                    <div className="flex-shrink-0 dark:text-emerald-600">
                         {/* <img src="/logo.png" alt="Logo" className="h-10" /> */}
                         <h2>Dr.Chiller</h2>
                     </div>
 
                     {/* Hamburger (Mobile) */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-3">
+                        <NavLink to="/search" className={navLink}>
+                            <BiSearch size={20} />
+                        </NavLink>
+
+                        {/* Theme Toggle */}
+                        <button onClick={toggleDark} className={`${navLink} cursor-pointer`}>
+                            {isDark ? <BiSun size={20} /> : <BiMoon size={20} />}
+                        </button>
                         <button
                             onClick={toggleMobileMenu}
                             className={`${navLink} focus:outline-none`}
@@ -70,7 +78,7 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                                `${navLink} ${isActive ? "font-semibold" : ""}`
                             }
                         >
                             Home
@@ -79,7 +87,7 @@ const Navbar = () => {
                         <NavLink
                             to="/about-us"
                             className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
+                                `${navLink} ${isActive ? "font-semibold" : ""}`
                             }
                         >
                             About Us
@@ -158,7 +166,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden px-4 pb-4 space-y-3 dark:text-white">
+                <div className="md:hidden px-4 py-4 space-y-3 dark:text-white bg-white dark:bg-gray-900">
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -181,7 +189,7 @@ const Navbar = () => {
                     <div className="block">
                         <details className="group">
                             <summary className={`${navLink} cursor-pointer`}>Products</summary>
-                            <ul className="ml-4 mt-2 space-y-2">
+                            <ul className="ml-4 mt-2 space-y-2 text-emerald-400">
                                 {[
                                     "Water Chillers",
                                     "Cold Rooms",
@@ -208,14 +216,6 @@ const Navbar = () => {
                     >
                         Contact Us
                     </NavLink>
-
-                    <NavLink to="/search" className={`block ${navLink} flex items-center gap-1`}>
-                        <BiSearch className="mt-1" size={18} /> Search
-                    </NavLink>
-
-                    <button onClick={toggleDark} className={`${navLink} flex items-center gap-1`}>
-                        {isDark ? <BiSun size={18} /> : <BiMoon size={18} />} Theme
-                    </button>
                 </div>
             )}
         </nav>

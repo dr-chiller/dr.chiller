@@ -12,7 +12,7 @@ const Choose = () => {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.2 }
+            { threshold: 0.01 }
         );
 
         if (sectionRef.current) {
@@ -32,12 +32,12 @@ const Choose = () => {
                     ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"}`}
             >
                 {/* Left Side - Images */}
-                <div className="relative flex flex-col items-center lg:block lg:ms-12">
+                <div className="relative flex flex-col items-center lg:block lg:ms-12 sm:mb-12">
                     <img
                         loading="lazy"
                         src={about1}
                         alt="Our Team"
-                        className={`hidden sm:block w-72 h-80 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform lg:rotate-[-3deg]
+                        className={`hidden sm:block w-72 h-80 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform sm:rotate-[-3deg]
                             transition-all duration-1000 ease-out
                             ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
                     />
@@ -45,8 +45,8 @@ const Choose = () => {
                         loading="lazy"
                         src={about2}
                         alt="Work in Action"
-                        className={`w-64 h-72 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform lg:rotate-[12deg] 
-                                   lg:absolute lg:top-20 lg:left-40
+                        className={`w-64 h-72 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform sm:rotate-[12deg] 
+                                   sm:absolute sm:top-20 sm:left-70 md:left-100 lg:top-20 lg:left-40
                                    transition-all duration-1000 delay-200 ease-out
                                    ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
                     />
@@ -79,7 +79,7 @@ const Choose = () => {
                                 key={index}
                                 className="flex items-center space-x-3 group transition-transform duration-300 hover:translate-x-1"
                             >
-                                <div className="text-2xl text-emerald-600 dark:text-emerald-400 transition-transform group-hover:scale-110">
+                                <div className="text-2xl text-yellow-400 dark:text-yellow-400 transition-transform group-hover:scale-110">
                                     {item.icon}
                                 </div>
                                 <span className="text-gray-800 dark:text-gray-200 font-medium">

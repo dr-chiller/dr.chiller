@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 const slides = [
-    {
-        header: 'Dr.Chiller',
-        description: 'Trusted experts in industrial and commercial cooling solutions across the region.',
-        button: '/products',
-        image: '/hero2.jpeg',
-    },
+    // {
+    //     header: 'Dr.Chiller',
+    //     description: 'Trusted experts in industrial and commercial cooling solutions across the region.',
+    //     button: '/products',
+    //     image: '/hero2.jpeg',
+    // },
     {
         header: 'Water Chillers',
         description: 'Our energy-efficient chillers deliver optimal cooling for industrial, commercial, and residential spaces.',
@@ -35,7 +34,7 @@ const slides = [
     },
     {
         header: 'Chilled Water Flushing',
-        description: 'Turnkey pipeline installations with expert design and maintenance support.',
+        description: 'Efficient flushing services to maintain chilled water system performance.',
         button: '/services/pipeline',
         image: '/hero6.jpeg',
     },
@@ -46,8 +45,8 @@ const slides = [
         image: '/hero7.jpeg',
     },
     {
-        header: 'A/C Maintainance',
-        description: 'Engineered cooling towers for HVAC and process cooling—built to perform in all climates.',
+        header: 'A/C Maintenance',
+        description: 'Professional AC servicing to keep systems running at peak efficiency.',
         button: '/products/cooling-towers',
         image: '/hero8.jpg',
     },
@@ -74,74 +73,96 @@ const slides = [
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Preload all images once
+    useEffect(() => {
+        slides.forEach(slide => {
+            const img = new Image();
+            img.src = slide.image;
+        });
+    }, []);
+
+    // Auto slide every 5 seconds
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+            setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
         }, 5000);
         return () => clearInterval(timer);
     }, []);
 
-    const current = slides[currentIndex];
-
     return (
         <div className="relative h-screen overflow-hidden">
-            <div
-                className="w-full h-full bg-cover bg-center relative flex items-center justify-center pt-10"
-                style={{ backgroundImage: `url(${current.image})` }}
-            >
-                <div className="absolute inset-0 bg-black/15" />
-                <div className="relative z-10 flex flex-col md:flex-row items-center w-full h-full">
-                    {/* Main Slide Content */}
-                    <div className="w-full md:w-3/4 h-full flex flex-col justify-center items-start p-6 md:p-12 text-white">
-                        <h1 className="text-4xl md:text-5xl text-emerald-500 font-bold mb-4 font-[Montserrat]">
-                            {current.header}
-                        </h1>
-                        <p className="text-lg md:text-xl mb-6 font-[Montserrat] max-w-2xl">
-                            {current.description}
-                        </p>
-                        <Link
-                            to={current.button}
-                            className="px-6 py-3 bg-emerald-500 text-black font-semibold rounded-lg shadow hover:bg-emerald-700 transition"
-                        >
-                            Explore
-                        </Link>
-                    </div>
+            {/* Background crossfade layer */}
+            <div className="absolute inset-0">
+                {slides.map((slide, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-700 ease-in-out 
+                            ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                        style={{
+                            backgroundImage: `url(${slide.image})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}
+                    />
+                ))}
+            </div>
 
-                    {/* Preview List */}
-                    <div className="hidden md:flex w-1/4 h-full flex-col justify-center space-y-3 p-4">
-                        <div className="backdrop-blur bg-transparent rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
-                            {slides.map((slide, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setCurrentIndex(index)}
-                                    className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 font-[Montserrat] shadow-md mb-2 
-                                        ${index === currentIndex
-                                            ? 'bg-emerald-500 text-white'
-                                            : 'bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800'}
-                                        hover:scale-105`}
-                                >
-                                    {slide.header}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
+            {/* Overlay for darkening */}
+            <div className="absolute inset-0 bg-black/50 z-0" />
 
-                    {/* Mobile Buttons */}
-                    <div className="absolute bottom-10 md:hidden w-full px-4 flex gap-2 overflow-x-auto no-scrollbar">
+            {/* Content */}
+            <div className="relative z-10 flex flex-col md:flex-row items-center w-full h-full md:pt-10">
+                {/* Main Slide Content */}
+                <div className="w-full md:w-3/4 h-full flex flex-col justify-center items-start p-6 md:p-12 text-white">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-emerald-500 font-bold mb-1 md:mb-4 font-[Montserrat]">
+                        {slides[currentIndex].header}
+                    </h1>
+                    <p className="text-base sm:text-lg md:text-xl mb-2 md:mb-6 font-[Montserrat] max-w-2xl">
+                        {slides[currentIndex].description}
+                    </p>
+                    <Link
+                        to={slides[currentIndex].button}
+                        className="px-3 py-2 md:px-6 md:py-3 bg-emerald-500 text-black font-semibold rounded-lg shadow hover:bg-emerald-700 transition"
+                    >
+                        Explore
+                    </Link>
+                </div>
+
+                {/* Desktop Preview List */}
+                <div className="hidden md:flex w-1/4 h-full flex-col justify-center space-y-3 p-4">
+                    <div className="backdrop-blur bg-transparent rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
                         {slides.map((slide, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`flex-shrink-0 px-4 py-2 rounded-full font-[Montserrat] text-sm transition-all 
+                                className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 font-[Montserrat] shadow-md mb-2 
                                     ${index === currentIndex
                                         ? 'bg-emerald-500 text-white'
-                                        : 'bg-white text-black'}
-                                    hover:bg-emerald-600 hover:text-white`}
+                                        : 'bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800'}
+                                    hover:scale-105`}
                             >
                                 {slide.header}
                             </button>
                         ))}
                     </div>
+                </div>
+
+                {/* Mobile Buttons */}
+                <div className="absolute bottom-2 md:hidden w-full px-4 flex gap-2 overflow-x-auto no-scrollbar">
+                    {slides.map((slide, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`flex-shrink-0 px-4 py-2 rounded-full font-[Montserrat] text-sm transition-all 
+                                ${index === currentIndex
+                                    ? 'bg-emerald-500 text-white'
+                                    : 'bg-white dark:bg-gray-900 text-black dark:text-white'}
+                                hover:bg-emerald-600 hover:text-white`}
+                        >
+                            {slide.header}
+                        </button>
+                    ))}
                 </div>
             </div>
         </div>

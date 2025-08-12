@@ -10,7 +10,7 @@ const Offers = () => {
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.2 }
+            { threshold: 0.01 }
         );
 
         if (sectionRef.current) {
@@ -76,10 +76,10 @@ const Offers = () => {
                             hover:scale-105 hover:shadow-2xl
                             ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
                         `}
-                        style={{ transitionDelay: `${i * 150}ms` }} // stagger animation
+                        style={{ transitionDelay: `${i * 150}ms` }}
                     >
                         {/* Left green bar hover effect */}
-                        <span className="absolute left-0 top-0 h-0 w-1 bg-emerald-500 transition-all duration-500 group-hover:h-full rounded-tr rounded-br"></span>
+                        <span className="absolute left-0 top-0 h-0 w-1 bg-yellow-300 transition-all duration-500 group-hover:h-full rounded-tl rounded-bl"></span>
 
                         {/* Icon */}
                         <div className="text-4xl text-emerald-600 dark:text-emerald-400 mb-4 transition-transform duration-500 group-hover:scale-110">
