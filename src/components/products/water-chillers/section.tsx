@@ -1,4 +1,6 @@
-import { Snowflake, Droplets, Wrench, Star, Gauge } from "lucide-react";
+import { Snowflake, Droplets, Wrench, Gauge, AirVent, Mail } from "lucide-react";
+import { MdEco } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -17,7 +19,7 @@ const products = [
     {
         title: "Air Cooled Domestic Water Chiller",
         blurb: "Quiet, compact solutions for comfort and light-commercial cooling.",
-        icon: <Droplets size={40} />,
+        icon: <AirVent size={40} />,
         image: "/air-cooled-domestic-water-chiller.jpg",
         bullets: [
             "Applications: villas, schools, labour camps, gyms, auditoriums",
@@ -30,7 +32,7 @@ const products = [
     {
         title: "Water Cooled Industrial Water Chiller",
         blurb: "High efficiency where condenser water is available or seawater duty applies.",
-        icon: <Gauge size={40} />,
+        icon: <Droplets size={40} />,
         image: "/water-cooled-industrial-water-chiller.webp",
         bullets: [
             "Marine duty: boats, ships, coastal plants",
@@ -56,7 +58,7 @@ const products = [
     {
         title: "Economic → Premium Range",
         blurb: "From value builds to premium components for maximum lifecycle ROI.",
-        icon: <Star size={40} />,
+        icon: <MdEco size={40} />,
         image: "/water-chiller-price-range.png",
         bullets: [
             "Choice of compressors: scroll, screw, semi-hermetic",
@@ -88,8 +90,8 @@ const products = [
 export default function Sections() {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-gray-800 dark:text-gray-200 font-bold text-3xl pb-8 text-center">Water Chillers</h2>
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-gray-800 dark:text-gray-200 font-bold text-3xl pb-8 text-center">Water Chillers</h2>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {products.map((p, i) => (
                         <article
@@ -171,6 +173,15 @@ export default function Sections() {
                         </article>
                     ))}
                 </div>
+                <Link
+                    to="/contact-us"
+                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
+                >
+                    <Mail />
+                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
+                        Contact Us
+                    </span>
+                </Link>
             </div>
         </section>
     );

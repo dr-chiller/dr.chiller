@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Breadcrumbs from "./components/breadcrumb";
 import Products from "./pages/products/products";
 import WaterChillers from "./pages/products/water-chillers";
+import ColdRooms from "./pages/products/cold-rooms";
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/water-chillers" element={<WaterChillers />} />
+        <Route path="/products/cold-rooms" element={<ColdRooms />} />
       </Routes>
       <Footer />
     </>
