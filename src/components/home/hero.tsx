@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const slides = [
     // {
@@ -90,14 +91,19 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="relative h-screen overflow-hidden">
+        <motion.div
+            className="relative h-screen overflow-hidden"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+        >
             {/* Background crossfade layer */}
             <div className="absolute inset-0">
                 {slides.map((slide, index) => (
                     <div
                         key={index}
                         className={`absolute inset-0 transition-opacity duration-700 ease-in-out 
-                            ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+            ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
                         style={{
                             backgroundImage: `url(${slide.image})`,
                             backgroundSize: 'cover',
@@ -114,11 +120,17 @@ const Hero = () => {
             {/* Content */}
             <div className="relative z-10 flex flex-col md:flex-row items-center w-full h-full md:pt-10">
                 {/* Main Slide Content */}
-                <div className="w-full md:w-3/4 h-full flex flex-col justify-center items-start p-6 md:p-12 text-white">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-emerald-500 font-bold mb-1 md:mb-4 font-[Montserrat]">
+                <motion.div
+                    className="w-full md:w-3/4 h-full flex flex-col justify-center items-start p-6 md:p-12 text-white"
+                    key={currentIndex}
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-emerald-500 font-bold mb-2 md:mb-4 font-[Montserrat]">
                         {slides[currentIndex].header}
                     </h1>
-                    <p className="text-base sm:text-lg md:text-xl mb-2 md:mb-6 font-[Montserrat] max-w-2xl">
+                    <p className="text-base sm:text-lg md:text-xl mb-3 md:mb-6 font-[Montserrat] max-w-2xl">
                         {slides[currentIndex].description}
                     </p>
                     <Link
@@ -127,45 +139,55 @@ const Hero = () => {
                     >
                         Explore
                     </Link>
-                </div>
+                </motion.div>
 
                 {/* Desktop Preview List */}
-                <div className="hidden md:flex w-1/4 h-full flex-col justify-center space-y-3 p-4">
+                <motion.div
+                    className="hidden md:flex w-1/4 h-full flex-col justify-center space-y-3 p-4"
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                >
                     <div className="backdrop-blur bg-transparent rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
                         {slides.map((slide, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
                                 className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 font-[Montserrat] shadow-md mb-2 
-                                    ${index === currentIndex
+                ${index === currentIndex
                                         ? 'bg-emerald-500 text-white'
                                         : 'bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800'}
-                                    hover:scale-105`}
+                hover:scale-105`}
                             >
                                 {slide.header}
                             </button>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Mobile Buttons */}
-                <div className="absolute bottom-2 md:hidden w-full px-4 flex gap-2 overflow-x-auto no-scrollbar">
+                <motion.div
+                    className="absolute bottom-2 md:hidden w-full px-4 flex gap-2 overflow-x-auto no-scrollbar"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+                >
                     {slides.map((slide, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`flex-shrink-0 px-4 py-2 rounded-full font-[Montserrat] text-sm transition-all 
-                                ${index === currentIndex
+              ${index === currentIndex
                                     ? 'bg-emerald-500 text-white'
                                     : 'bg-white dark:bg-gray-900 text-black dark:text-white'}
-                                hover:bg-emerald-600 hover:text-white`}
+              hover:bg-emerald-600 hover:text-white`}
                         >
                             {slide.header}
                         </button>
                     ))}
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

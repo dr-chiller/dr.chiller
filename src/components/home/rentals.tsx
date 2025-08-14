@@ -1,6 +1,6 @@
 const Rentals = () => {
     return (
-        <section className="py-16 bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
+        <section className="py-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid md:grid-cols-2 gap-10 items-center">
 
                 {/* Image */}

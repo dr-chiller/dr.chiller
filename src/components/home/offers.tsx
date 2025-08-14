@@ -68,11 +68,11 @@ const Offers = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 {services.map((service, i) => (
                     <div
                         key={i}
-                        className={`group relative flex flex-col p-6 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800 transition-all duration-700 ease-out
+                        className={`group relative flex flex-col p-4 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800 transition-all duration-700 ease-out
                             hover:scale-105 hover:shadow-2xl
                             ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
                         `}
@@ -82,7 +82,7 @@ const Offers = () => {
                         <span className="absolute left-0 top-0 h-0 w-1 bg-yellow-300 transition-all duration-500 group-hover:h-full rounded-tl rounded-bl"></span>
 
                         {/* Icon */}
-                        <div className="text-4xl text-emerald-600 dark:text-emerald-400 mb-4 transition-transform duration-500 group-hover:scale-110">
+                        <div className="text-4xl text-emerald-600 dark:text-emerald-400 mb-4 transition-transform duration-500 group-hover:scale-102">
                             {service.icon}
                         </div>
 

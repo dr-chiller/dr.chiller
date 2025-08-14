@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BiMoon, BiSearch, BiSun } from "react-icons/bi";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
     const [isDark, setIsDark] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [showDropdown, setShowDropdown] = useState(false);
+    const [showDropdownP, setShowDropdownP] = useState(false);
+    const [showDropdownS, setShowDropdownS] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
+    const [dropdownTimeoutP, setDropdownTimeoutP] = useState<ReturnType<typeof setTimeout> | null>(null);
+    const [dropdownTimeoutS, setDropdownTimeoutS] = useState<ReturnType<typeof setTimeout> | null>(null);
 
     const toggleDark = () => {
         setIsDark(!isDark);
@@ -19,14 +21,23 @@ const Navbar = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    const handleMouseEnter = () => {
-        if (dropdownTimeout) clearTimeout(dropdownTimeout);
-        setShowDropdown(true);
+    const handleMouseEnterP = () => {
+        if (dropdownTimeoutP) clearTimeout(dropdownTimeoutP);
+        setShowDropdownP(true);
     };
 
-    const handleMouseLeave = () => {
-        const timeout = setTimeout(() => setShowDropdown(false), 200);
-        setDropdownTimeout(timeout);
+    const handleMouseLeaveP = () => {
+        const timeout = setTimeout(() => setShowDropdownP(false), 200);
+        setDropdownTimeoutP(timeout);
+    };
+    const handleMouseEnterS = () => {
+        if (dropdownTimeoutS) clearTimeout(dropdownTimeoutS);
+        setShowDropdownS(true);
+    };
+
+    const handleMouseLeaveS = () => {
+        const timeout = setTimeout(() => setShowDropdownS(false), 200);
+        setDropdownTimeoutS(timeout);
     };
 
     useEffect(() => {
@@ -38,7 +49,7 @@ const Navbar = () => {
     }, []);
 
     const navLink =
-        "text-emerald-500 dark:text-emerald-400 hover:text-emerald-400 dark:hover:text-emerald-500 font-medium transition-colors";
+        "text-emerald-500 dark:text-emerald-400 hover:text-emerald-400 dark:hover:text-emerald-500 font-medium transition-colors cursor-pointer";
 
     return (
         <nav
@@ -95,25 +106,58 @@ const Navbar = () => {
                         {/* Products Dropdown */}
                         <div
                             className="relative"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
+                            onMouseEnter={handleMouseEnterP}
+                            onMouseLeave={handleMouseLeaveP}
                         >
-                            <button className={navLink}>Products</button>
-                            {showDropdown && (
+                            {/* Main Products Link */}
+                            <Link to="/products" className={navLink}>
+                                Products
+                            </Link>
+
+                            {/* Dropdown */}
+                            {showDropdownP && (
                                 <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-64">
                                     <ul className="py-2">
                                         {[
-                                            "Water Chillers",
-                                            "Cold Rooms",
-                                            "Air Condition Units",
-                                            "Compressors",
-                                            "Heat Exchangers",
-                                            "Swimming Pool Heat Pump",
-                                            "Spare parts",
+                                            { label: "All Products", path: "/products" },
+                                            { label: "Water Chillers", path: "/products/water-chillers" },
+                                            { label: "Cold Rooms", path: "/products/cold-rooms" },
+                                            { label: "Cooling Towers", path: "/products/cooling-towers" },
+                                            { label: "Heat Exchangers", path: "/products/heat-exchangers" },
+                                        ].map((item, index) => (
+                                            <li key={index}>
+                                                <Link
+                                                    to={item.path}
+                                                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-sm text-gray-800 dark:text-gray-200"
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+
+                        <div
+                            className="relative"
+                            onMouseEnter={handleMouseEnterS}
+                            onMouseLeave={handleMouseLeaveS}
+                        >
+                            <button className={navLink}>Services</button>
+                            {showDropdownS && (
+                                <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-64">
+                                    <ul className="py-2">
+                                        {[
+                                            "Chilled Water Pipeline Works",
+                                            "Chilled Water Flushing",
+                                            "A/C Maintenance",
+                                            "Compressor Overhauling",
+                                            "Coil Replacements",
                                         ].map((item, index) => (
                                             <li
                                                 key={index}
-                                                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm text-gray-800 dark:text-gray-200 cursor-pointer"
+                                                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm hover:text-emerald-400 text-gray-800 dark:text-gray-200 cursor-pointer"
                                             >
                                                 {item}
                                             </li>
@@ -130,15 +174,6 @@ const Navbar = () => {
                             }
                         >
                             Rentals
-                        </NavLink>
-
-                        <NavLink
-                            to="/services"
-                            className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
-                            }
-                        >
-                            Services
                         </NavLink>
 
                         <NavLink
@@ -202,15 +237,12 @@ const Navbar = () => {
                                 {[
                                     "Water Chillers",
                                     "Cold Rooms",
-                                    "Air Condition Units",
-                                    "Compressors",
+                                    "Cooling Towers",
                                     "Heat Exchangers",
-                                    "Swimming Pool Heat Pump",
-                                    "Spare parts",
                                 ].map((item, index) => (
                                     <li
                                         key={index}
-                                        className="text-sm text-gray-800 dark:text-gray-200"
+                                        className="cursor-pointer text-sm text-emerald-400 hover:text-green-500"
                                     >
                                         {item}
                                     </li>
@@ -219,14 +251,28 @@ const Navbar = () => {
                         </details>
                     </div>
 
-                    <NavLink
-                        to="/services"
-                        className={({ isActive }) =>
-                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
-                        }
-                    >
-                        Services
-                    </NavLink>
+                    <div className="block">
+                        <details className="group">
+                            <summary className={`${navLink} cursor-pointer`}>Services</summary>
+                            <ul className="ml-4 mt-2 space-y-2">
+                                {[
+                                    "Chilled Water Pipeline Works",
+                                    "Chilled Water Flushing",
+                                    "A/C Maintenance",
+                                    "Compressor Overhauling",
+                                    "Coil Replacements",
+                                ].map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="cursor-pointer text-sm text-emerald-400 hover:text-green-500"
+                                    >
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </details>
+                    </div>
+
                     <NavLink
                         to="/rentals"
                         className={({ isActive }) =>
