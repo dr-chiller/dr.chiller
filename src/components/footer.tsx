@@ -23,10 +23,10 @@ const Footer = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                         {[
-                            { name: "Water Chillers", link: "/products#water-chillers" },
-                            { name: "Cold Rooms", link: "/products#cold-rooms" },
-                            { name: "Cooling Towers", link: "/products#cooling-towers" },
-                            { name: "Heat Exchangers", link: "/products#heat-exchangers" }
+                            { name: "Water Chillers", link: "/products/water-chillers" },
+                            { name: "Cold Rooms", link: "/products/cold-rooms" },
+                            { name: "Heat Exchangers", link: "/products/heat-exchangers" },
+                            { name: "A/C Units", link: "/products/ac-units" },
                         ].map((item, i) => (
                             <li key={i}>
                                 <Link

@@ -1,4 +1,4 @@
-const Hero = () => {
+const ColdRoomsHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
@@ -19,19 +19,19 @@ const Hero = () => {
             </div>
 
             {/* Right Images */}
-            <div className="relative flex justify-center md:justify-end items-center pb-10">
+            <div className="relative flex justify-center md:justify-end items-center pb-20">
                 <div className="relative">
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/hero1.jpeg"
+                            src="/cold-rooms-1.jpg"
                             alt="Cold Room"
-                            className="w-84 h-auto object-cover"
+                            className="w-84 lg:w-100 h-auto object-cover"
                         />
                     </div>
 
-                    <div className="absolute top-35 lg:top-6 left-1 sm:left-10 lg:-left-50 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
+                    <div className="absolute top-35 lg:top-10 left-1 sm:left-9 lg:-left-30 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/hero1.jpeg"
+                            src="/cold-rooms-2.jpg"
                             alt="Ice Block Machine"
                             className="w-44 sm:w-64 h-auto object-cover"
                         />
@@ -42,4 +42,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default ColdRoomsHero;

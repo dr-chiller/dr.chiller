@@ -82,7 +82,7 @@ const coldRoomProducts = [
     },
 ];
 
-export default function Section() {
+export default function ColdRoomsSection() {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

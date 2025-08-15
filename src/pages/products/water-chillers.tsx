@@ -1,15 +1,15 @@
-import Header from "../../components/products/water-chillers/header";
-import Hero from "../../components/products/water-chillers/hero";
-import Sections from "../../components/products/water-chillers/section";
-import SubSection from "../../components/products/water-chillers/sub-section";
+import WaterChillersHeader from "../../components/products/water-chillers/header";
+import WaterChillersHero from "../../components/products/water-chillers/hero";
+import WaterChillersSections from "../../components/products/water-chillers/section";
+import WaterChillersSubSection from "../../components/products/water-chillers/sub-section";
 
 const WaterChillers = () => {
     return (
         <div>
-            <Header />
-            <Hero />
-            <Sections />
-            <SubSection />
+            <WaterChillersHeader />
+            <WaterChillersHero />
+            <WaterChillersSections />
+            <WaterChillersSubSection />
         </div>
     )
 }

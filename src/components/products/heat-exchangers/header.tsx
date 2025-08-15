@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
-export default function ColdRoomsHeader() {
+export default function HeatExchangersHeader() {
     const navigate = useNavigate();
 
     return (
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/cold-rooms-header.jpg')`,
+                backgroundImage: `url('/heat-exchangers-header.jpg')`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",
             }}
         >
@@ -27,7 +27,7 @@ export default function ColdRoomsHeader() {
             {/* Text */}
             <div className="relative z-10 px-4">
                 <h1 className="text-3xl sm:text-5xl font-bold drop-shadow-lg">
-                    Cold Rooms & Ice Block Machines
+                    Heat Exchangers & Cooling Towers
                 </h1>
             </div>
         </section>

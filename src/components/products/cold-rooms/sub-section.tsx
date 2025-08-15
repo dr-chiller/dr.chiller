@@ -1,4 +1,4 @@
-const SubSection = () => {
+const ColdRoomsSubSection = () => {
     return (
         <section className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16">
             
@@ -15,8 +15,8 @@ const SubSection = () => {
 
             {/* Text Side */}
             <div className="flex-1">
-                <h2 className="text-3xl font-bold mb-3 text-gray-800 dark:text-gray-200">
-                    Premium Ice Block Machines
+                <h2 className="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200">
+                    Ice Block Machines
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Our advanced ice block machines are engineered for maximum efficiency, 
@@ -41,4 +41,4 @@ const SubSection = () => {
     );
 };
 
-export default SubSection;
+export default ColdRoomsSubSection;

@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
 
             {/* Text */}
-            <div className="p-10 flex flex-col justify-center text-center sm:text-left">
+            <div className="p-6 flex flex-col justify-center text-center sm:text-left">
                 <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200">{title}</h3>
                 <p className="text-gray-600 text-base mb-3 text-gray-700 dark:text-gray-300">{description}</p>
                 <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 text-gray-700 dark:text-gray-300">
@@ -43,7 +43,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     );
 };
 
-const SubSection: React.FC = () => {
+const WaterChillersSubSection: React.FC = () => {
     return (
         <div className="p-6 sm:p-16 bg-white dark:bg-black">
             <h2 className="text-gray-800 dark:text-gray-200 font-bold text-3xl pb-8 text-center">Similar Products</h2>
@@ -51,17 +51,18 @@ const SubSection: React.FC = () => {
                 <ProductCard
                     title="Water Cooler"
                     image="/water-cooler.png"
-                    description="Efficient cooling solution for homes and offices."
+                    description="Compact and efficient cooling unit designed for domestic and light commercial use — ideal for villas, offices and workspaces that need a constant supply of chilled water."
                     points={[
                         "Energy-efficient cooling",
                         "Low maintenance",
                         "Eco-friendly design",
                     ]}
                 />
+
                 <ProductCard
                     title="Heat Pump"
                     image="/heat-pump.webp"
-                    description="All-season comfort with heating and cooling."
+                    description="Versatile system that provides both cooling and heating all year round. Engineered for high efficiency, it ensures comfortable indoor temperatures while keeping energy costs low."
                     points={[
                         "Dual heating & cooling",
                         "Cost-effective operation",
@@ -73,4 +74,4 @@ const SubSection: React.FC = () => {
     );
 };
 
-export default SubSection;
+export default WaterChillersSubSection;

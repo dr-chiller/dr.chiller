@@ -118,8 +118,8 @@ const Navbar = () => {
                                             { label: "All Products", path: "/products" },
                                             { label: "Water Chillers", path: "/products/water-chillers" },
                                             { label: "Cold Rooms", path: "/products/cold-rooms" },
-                                            { label: "Cooling Towers", path: "/products/cooling-towers" },
                                             { label: "Heat Exchangers", path: "/products/heat-exchangers" },
+                                            { label: "A/C Units", path: "/products/ac-units" },
                                         ].map((item, index) => (
                                             <li key={index}>
                                                 <Link
@@ -234,8 +234,8 @@ const Navbar = () => {
                                             { label: "All Products", path: "/products" },
                                             { label: "Water Chillers", path: "/products/water-chillers" },
                                             { label: "Cold Rooms", path: "/products/cold-rooms" },
-                                            { label: "Cooling Towers", path: "/products/cooling-towers" },
                                             { label: "Heat Exchangers", path: "/products/heat-exchangers" },
+                                            { label: "A/C Units", path: "/products/ac-units" },
                                         ].map((item, index) => (
                                             <li key={index}>
                                                 <Link

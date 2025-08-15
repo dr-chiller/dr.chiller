@@ -1,15 +1,15 @@
-import Header from "../../components/products/cold-rooms/header";
-import Hero from "../../components/products/cold-rooms/hero";
-import Section from "../../components/products/cold-rooms/section";
-import SubSection from "../../components/products/cold-rooms/sub-section";
+import ColdRoomsHeader from "../../components/products/cold-rooms/header";
+import ColdRoomsHero from "../../components/products/cold-rooms/hero";
+import ColdRoomsSection from "../../components/products/cold-rooms/section";
+import ColdRoomsSubSection from "../../components/products/cold-rooms/sub-section";
 
 const ColdRooms = () => {
     return (
         <div>
-            <Header />
-            <Hero />
-            <Section />
-            <SubSection />
+            <ColdRoomsHeader />
+            <ColdRoomsHero />
+            <ColdRoomsSection />
+            <ColdRoomsSubSection />
         </div>
     )
 }
