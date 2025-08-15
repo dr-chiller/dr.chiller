@@ -5,27 +5,27 @@ const products = [
     {
         name: "Water Chillers",
         description: "High-performance chillers for all your cooling needs.",
-        image: "/hero1.jpeg",
+        image: "/water-chiller-2.jpg",
         link: "/products/water-chillers",
     },
     {
         name: "Cold Rooms",
         description: "Energy-efficient cold storage rooms for perishable goods.",
-        image: "/hero1.jpeg",
+        image: "/chiller-rooms.jpeg",
         link: "/products/cold-rooms",
     },
     {
         name: "Heat Exchangers",
         description:
             "Reliable heat exchangers to optimize energy transfer processes.",
-        image: "/images/products/cooling-tower.jpg",
+        image: "/heat-exchangers-1.jpg",
         link: "/products/heat-exchangers",
     },
     {
         name: "A/C Units",
         description:
-            "Reliable heat exchangers to optimize energy transfer processes.",
-        image: "/images/products/heat-exchanger.jpg",
+            "Efficient air conditioning systems designed for comfort and reliability.",
+        image: "/ac-units-2.jpg",
         link: "/products/ac-units",
     },
 ];

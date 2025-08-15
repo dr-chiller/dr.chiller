@@ -1,9 +1,11 @@
-import Main from "../../components/products/main";
+import ProductsHeader from "../../components/products/main/header";
+import ProductsList from "../../components/products/main/list";
 
 const Products = () => {
     return (
         <div>
-            <Main />
+            <ProductsHeader />
+            <ProductsList />
         </div>
     )
 }

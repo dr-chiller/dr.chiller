@@ -19,7 +19,7 @@ const ColdRoomsHero = () => {
             </div>
 
             {/* Right Images */}
-            <div className="relative flex justify-center md:justify-end items-center pb-20">
+            <div className="relative flex justify-center md:justify-end items-center pb-20 lg:pb-0">
                 <div className="relative">
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img

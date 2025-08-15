@@ -8,6 +8,8 @@ import Products from "./pages/products/products";
 import WaterChillers from "./pages/products/water-chillers";
 import ColdRooms from "./pages/products/cold-rooms";
 import HeatExchangers from "./pages/products/heat-exchanges";
+import ACUnits from "./pages/products/ac-units";
+import ScrollToTop from "./components/scroll-to-top";
 
 function App() {
   const location = useLocation();
@@ -17,6 +19,7 @@ function App() {
     <>
       <Navbar />
       {path !== "/" && <Breadcrumbs />}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
@@ -24,6 +27,7 @@ function App() {
         <Route path="/products/water-chillers" element={<WaterChillers />} />
         <Route path="/products/cold-rooms" element={<ColdRooms />} />
         <Route path="/products/heat-exchangers" element={<HeatExchangers />} />
+        <Route path="/products/ac-units" element={<ACUnits />} />
       </Routes>
       <Footer />
     </>
