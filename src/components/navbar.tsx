@@ -124,7 +124,7 @@ const Navbar = () => {
                                             <li key={index}>
                                                 <Link
                                                     to={item.path}
-                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base" } hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
+                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
                                                 >
                                                     {item.label}
                                                 </Link>
@@ -155,7 +155,7 @@ const Navbar = () => {
                                             <li key={index}>
                                                 <Link
                                                     to={item.path}
-                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base" } hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
+                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
                                                 >
                                                     {item.label}
                                                 </Link>
@@ -233,23 +233,23 @@ const Navbar = () => {
                         <details className="group">
                             <summary className={`${navLink} cursor-pointer`}>Products</summary>
                             <ul className="py-2">
-                                        {[
-                                            { label: "All Products", path: "/products" },
-                                            { label: "Water Chillers", path: "/products/water-chillers" },
-                                            { label: "Cold Rooms", path: "/products/cold-rooms" },
-                                            { label: "Heat Exchangers", path: "/products/heat-exchangers" },
-                                            { label: "A/C Units", path: "/products/ac-units" },
-                                        ].map((item, index) => (
-                                            <li key={index}>
-                                                <Link
-                                                    to={item.path}
-                                                    className={`block px-4 py-2 ${index === 0 ? "text-base" : "text-sm"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-emerald-600 dark:text-gray-200`}
-                                                >
-                                                    {item.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                {[
+                                    { label: "All Products", path: "/products" },
+                                    { label: "Water Chillers", path: "/products/water-chillers" },
+                                    { label: "Cold Rooms", path: "/products/cold-rooms" },
+                                    { label: "Heat Exchangers", path: "/products/heat-exchangers" },
+                                    { label: "A/C Units", path: "/products/ac-units" },
+                                ].map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            to={item.path}
+                                            className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-emerald-600 dark:text-gray-200`}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </details>
                     </div>
 
@@ -258,17 +258,20 @@ const Navbar = () => {
                             <summary className={`${navLink} cursor-pointer`}>Services</summary>
                             <ul className="ml-4 mt-2 space-y-2">
                                 {[
-                                    "Chilled Water Pipeline Works",
-                                    "Chilled Water Flushing",
-                                    "A/C Maintenance",
-                                    "Compressor Overhauling",
-                                    "Coil Replacements",
+                                    { label: "All Services", path: "/services" },
+                                    { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
+                                    { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
+                                    { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
+                                    { label: "Overhauling & Winding", path: "/services/overhauling-and-winding" },
+                                    { label: "AMC", path: "/services/amc" },
                                 ].map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="cursor-pointer text-sm text-emerald-400 hover:text-green-500"
-                                    >
-                                        {item}
+                                    <li key={index}>
+                                        <Link
+                                            to={item.path}
+                                            className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-emerald-600 dark:text-gray-200`}
+                                        >
+                                            {item.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
