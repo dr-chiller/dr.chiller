@@ -1,3 +1,4 @@
+import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductsHeader() {
@@ -5,7 +6,7 @@ export default function ProductsHeader() {
 
     return (
         <section
-            className="relative h-[35vh] flex items-center justify-center text-center text-white"
+            className="relative h-[25vh] flex items-center justify-center text-center text-white"
             style={{
                 backgroundImage: `url('/ac-units-header.jpg')`,
                 backgroundSize: "cover",
@@ -19,9 +20,9 @@ export default function ProductsHeader() {
             {/* Back Button */}
             <button
                 onClick={() => navigate(-1)}
-                className="absolute cursor-pointer bottom-5 right-5 bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-lg backdrop-blur-sm transition-all duration-200"
+                className="absolute cursor-pointer flex items-center gap-1 bottom-5 right-5 bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-lg backdrop-blur-sm transition-all duration-200"
             >
-                ⬅ Back
+                <BiArrowBack /> Back
             </button>
 
             {/* Text */}

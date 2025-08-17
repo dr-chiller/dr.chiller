@@ -1,13 +1,20 @@
 import { Snowflake, Package, Thermometer, Wrench, Gauge, Settings, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import cr1 from "../../../assets/images/products/chiller-rooms.jpeg";
+import cr2 from "../../../assets/images/products/freezer-rooms.jpg";
+import cr3 from "../../../assets/images/products/blast-freezers.png";
+import cr4 from "../../../assets/images/products/condensers.jpg";
+import cr5 from "../../../assets/images/products/cold-rooms-range.jpg";
+import cr6 from "../../../assets/images/products/cold-rooms-temperature.jpg";
+
 const coldRoomProducts = [
     {
         title: "Chiller Rooms",
         blurb:
             "Ideal for fruits, vegetables, flowers, chocolates, and medicines with precise temperature control.",
         icon: <Snowflake size={40} />,
-        image: "/chiller-rooms.jpeg",
+        image: cr1,
         bullets: [
             "Maintain freshness and quality",
             "Custom sizes for different storage needs",
@@ -20,7 +27,7 @@ const coldRoomProducts = [
         blurb:
             "Designed for fish, meat, and ice cream — perfect for long-term frozen storage.",
         icon: <Package size={40} />,
-        image: "/freezer-rooms.jpg",
+        image: cr2,
         bullets: [
             "Deep freezing capacity",
             "Energy-efficient insulation",
@@ -33,7 +40,7 @@ const coldRoomProducts = [
         blurb:
             "Rapid cooling and freezing solutions to preserve texture, flavor, and safety.",
         icon: <Thermometer size={40} />,
-        image: "/blast-freezers.png",
+        image: cr3,
         bullets: [
             "Fast pull-down temperatures",
             "Ideal for bakeries, seafood, and meat processing",
@@ -46,7 +53,7 @@ const coldRoomProducts = [
         blurb:
             "Reliable supply and installation for cold room systems of any scale.",
         icon: <Wrench size={40} />,
-        image: "/condensers.jpg",
+        image: cr4,
         bullets: [
             "Tailored to your cold storage needs",
             "Professional installation",
@@ -59,7 +66,7 @@ const coldRoomProducts = [
         blurb:
             "Choose from a wide range of cold room and ice block machine models to match your capacity and budget.",
         icon: <Settings size={40} />,
-        image: "/cold-rooms-range.jpg",
+        image: cr5,
         bullets: [
             "From compact units to large-scale plants",
             "Suitable for multiple industries",
@@ -72,7 +79,7 @@ const coldRoomProducts = [
         blurb:
             "Our systems can reliably maintain temperatures from -40°C to +20°C for all types of storage needs.",
         icon: <Gauge size={40} />,
-        image: "/cold-rooms-temperature.jpg",
+        image: cr6,
         bullets: [
             "Covers both deep freezing and chilling",
             "Precise digital controls",

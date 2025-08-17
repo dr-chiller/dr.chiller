@@ -1,13 +1,18 @@
 import { Fan, Wrench, RefreshCcw, Settings2, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import ac1 from "../../../assets/images/products/ac-units.jpg";
+import ac2 from "../../../assets/images/products/ac-temperature-range.jpg";
+import ac3 from "../../../assets/images/products/ac-cleaning-service.jpg";
+import ac4 from "../../../assets/images/products/ac-refurbishment.png";
+
 const acUnitProducts = [
     {
         title: "Air Conditioning Units",
         blurb:
             "Full range of air-conditioning systems for residential, commercial and industrial applications.",
         icon: <Settings2 size={36} />,
-        image: "/ac-units.jpg",
+        image: ac1,
         bullets: [
             "Split AC / Free-standing type",
             "Ductable split AC / Package AC",
@@ -20,7 +25,7 @@ const acUnitProducts = [
         blurb:
             "Units available from 1.5 TR up to 25 TR to match every possible cooling requirement.",
         icon: <Fan size={36} />,
-        image: "/ac-temperature-range.avif",
+        image: ac2,
         bullets: [
             "1.5 TR – 5 TR (residential / light commercial)",
             "10 TR – 25 TR (heavy commercial / industrial)",
@@ -32,7 +37,7 @@ const acUnitProducts = [
         blurb:
             "Complete field service for A/C systems to maintain performance and energy efficiency.",
         icon: <Wrench size={36} />,
-        image: "/ac-cleaning-service.jpg",
+        image: ac3,
         bullets: [
             "Water service & on-site cleaning",
             "AC duct cleaning",
@@ -44,7 +49,7 @@ const acUnitProducts = [
         blurb:
             "Restoration and upgrade services for aging systems to extend life and improve reliability.",
         icon: <RefreshCcw size={36} />,
-        image: "/ac-refurbishment.png",
+        image: ac4,
         bullets: [
             "Compressor, coil and fan replacements",
             "Blower motor & compressor rewinding",

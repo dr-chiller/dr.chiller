@@ -1,3 +1,5 @@
+import ac_units_1 from "../../../assets/images/products/ac-units-1.jpg";
+import ac_units_2 from "../../../assets/images/products/ac-units-2.jpg";
 const ACUnitsHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -25,7 +27,7 @@ const ACUnitsHero = () => {
                     {/* Main Image */}
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/ac-units-1.jpg"
+                            src={ac_units_1}
                             alt="A/C Unit"
                             className="w-84 h-auto object-cover"
                         />
@@ -34,7 +36,7 @@ const ACUnitsHero = () => {
                     {/* Overlapping Image */}
                     <div className="absolute top-36 sm:left-10 lg:-left-32 lg:top-5 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/ac-units-2.jpg"
+                            src={ac_units_2}
                             alt="HVAC Equipment"
                             className="w-64 h-auto object-cover"
                         />

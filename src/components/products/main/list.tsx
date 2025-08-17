@@ -1,29 +1,34 @@
 import { Link } from "react-router-dom";
 
+import wc from "../../../assets/images/products/water-chiller-2.jpg";
+import cr from "../../../assets/images/products/chiller-rooms.jpeg";
+import he from "../../../assets/images/products/heat-exchangers-1.jpg";
+import ac from "../../../assets/images/products/ac-units-2.jpg";
+
 export default function ProductsList() {
     const products = [
         {
             name: "Water Chillers",
             description: "High-performance chillers for all industrial and commercial cooling needs.",
-            image: "/water-chiller-2.jpg",
+            image: wc,
             link: "/products/water-chillers",
         },
         {
             name: "Cold Rooms",
             description: "Energy-efficient cold storage rooms for fresh and frozen products.",
-            image: "/chiller-rooms.jpeg",
+            image: cr,
             link: "/products/cold-rooms",
         },
         {
             name: "Heat Exchangers",
             description: "Reliable heat exchangers for efficient thermal energy transfer.",
-            image: "/heat-exchangers-1.jpg",
+            image: he,
             link: "/products/heat-exchangers",
         },
         {
             name: "A/C Units",
             description: "Efficient air conditioning systems for residential and industrial applications.",
-            image: "/ac-units-2.jpg",
+            image: ac,
             link: "/products/ac-units",
         },
     ];

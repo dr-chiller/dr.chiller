@@ -1,3 +1,6 @@
+import water_chillers_1 from "../../../assets/images/products/water-chiller-1.jpg";
+import water_chillers_2 from "../../../assets/images/products/water-chiller-2.jpg";
+
 const WaterChillersHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -21,7 +24,7 @@ const WaterChillersHero = () => {
                 <div className="relative">
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/water-chiller-1.jpg"
+                            src={water_chillers_1}
                             alt="Water Chiller"
                             className="w-84 h-auto object-cover"
                         />
@@ -29,7 +32,7 @@ const WaterChillersHero = () => {
 
                     <div className="absolute top-36 sm:left-10 lg:-left-30 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/water-chiller-2.jpg"
+                            src={water_chillers_2}
                             alt="Cooling Equipment"
                             className="w-64 h-auto object-cover"
                         />

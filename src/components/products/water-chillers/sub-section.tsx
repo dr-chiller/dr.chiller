@@ -1,4 +1,5 @@
-import React from "react";
+import water_cooler from "../../../assets/images/products/water-cooler.png";
+import heat_pump from "../../../assets/images/products/heat-pump.webp";
 
 type ProductCardProps = {
     title: string;
@@ -50,7 +51,7 @@ const WaterChillersSubSection: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <ProductCard
                     title="Water Cooler"
-                    image="/water-cooler.png"
+                    image={water_cooler}
                     description="Compact and efficient cooling unit designed for domestic and light commercial use — ideal for villas, offices and workspaces that need a constant supply of chilled water."
                     points={[
                         "Energy-efficient cooling",
@@ -61,7 +62,7 @@ const WaterChillersSubSection: React.FC = () => {
 
                 <ProductCard
                     title="Heat Pump"
-                    image="/heat-pump.webp"
+                    image={heat_pump}
                     description="Versatile system that provides both cooling and heating all year round. Engineered for high efficiency, it ensures comfortable indoor temperatures while keeping energy costs low."
                     points={[
                         "Dual heating & cooling",

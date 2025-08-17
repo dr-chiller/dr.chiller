@@ -1,3 +1,5 @@
+import heat_exchangers_1 from "../../../assets/images/products/heat-exchangers-1.jpg";
+import heat_exchangers_2 from "../../../assets/images/products/heat-exchangers-2.webp";
 const HeatExchangersHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -25,7 +27,7 @@ const HeatExchangersHero = () => {
                     {/* Main Image */}
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/heat-exchangers-1.jpg"
+                            src={heat_exchangers_1}
                             alt="Heat Exchanger"
                             className="w-84 h-auto object-cover"
                         />
@@ -34,7 +36,7 @@ const HeatExchangersHero = () => {
                     {/* Overlapping Image */}
                     <div className="absolute top-36 sm:left-10 lg:-left-28 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/heat-exchangers-2.webp"
+                            src={heat_exchangers_2}
                             alt="Cooling Tower"
                             className="w-64 h-auto object-cover"
                         />

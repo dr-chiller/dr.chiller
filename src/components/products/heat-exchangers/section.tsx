@@ -2,13 +2,20 @@ import { Layers3, Wrench, Settings, Repeat2, Thermometer } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 
+import he1 from '../../../assets/images/products/shell-and-tube-heat-exchangers.jpg';
+import he2 from '../../../assets/images/products/titanium-heat-exchangers.jpg';
+import he3 from '../../../assets/images/products/retubing-heat-exchangers.jpg';
+import he4 from '../../../assets/images/products/plate-heat-exchangers.jpeg';
+import he5 from '../../../assets/images/products/plate-heat-exchangers-spare-parts.jpg';
+import he6 from '../../../assets/images/products/heat-exchangers-custom-made.jpg';
+
 const heatExchangerProducts = [
     {
         title: "Shell & Tube Heat Exchanger",
         blurb:
             "Heavy-duty exchangers for oil cooling, process fluids and chilled-water duties.",
         icon: <Layers3 size={36} />,
-        image: "/shell-and-tube-heat-exchangers.jpg",
+        image: he1,
         bullets: [
             "Straight or U-tube configuration",
             "Single & double pass (S/T type)",
@@ -21,7 +28,7 @@ const heatExchangerProducts = [
         blurb:
             "Polypropylene and Titanium builds for aggressive or corrosive chemical media.",
         icon: <Thermometer size={36} />,
-        image: "/titanium-heat-exchangers.jpg",
+        image: he2,
         bullets: [
             "Excellent corrosion resistance",
             "Suitable for chemical and seawater duty",
@@ -33,7 +40,7 @@ const heatExchangerProducts = [
         blurb:
             "Re-tubing and repair services to restore exchanger performance and extend service life.",
         icon: <Repeat2 size={36} />,
-        image: "/retubing-heat-exchangers.jpg",
+        image: he3,
         bullets: [
             "Tube bundle replacements",
             "On-site leak testing",
@@ -45,7 +52,7 @@ const heatExchangerProducts = [
         blurb:
             "Compact, high-efficiency plate type exchangers for clean fluids and hygienic duties.",
         icon: <Layers3 size={36} />,
-        image: "/plate-heat-exchangers.jpeg",
+        image: he4,
         bullets: [
             "Gasketed / brazed / semi-welded types",
             "Quick plate access",
@@ -57,7 +64,7 @@ const heatExchangerProducts = [
         blurb:
             "Complete support for plate exchangers including plate, gasket & seal replacement.",
         icon: <Wrench size={36} />,
-        image: "/plate-heat-exchangers-spare-parts.jpg",
+        image: he5,
         bullets: [
             "Plate inspection & cleaning",
             "Gasket replacement",
@@ -69,7 +76,7 @@ const heatExchangerProducts = [
         blurb:
             "Heat exchangers available in SS-316L, Copper or Titanium to match your process requirements.",
         icon: <Settings size={36} />,
-        image: "/heat-exchangers-custom-made.jpg",
+        image: he6,
         bullets: [
             "SS-316L for hygienic applications",
             "Copper for general chilled-water",

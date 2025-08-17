@@ -124,7 +124,7 @@ const Navbar = () => {
                                             <li key={index}>
                                                 <Link
                                                     to={item.path}
-                                                    className={`block px-4 py-2 ${index === 0 ? "text-base" : "text-sm" } hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
+                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base" } hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
                                                 >
                                                     {item.label}
                                                 </Link>
@@ -142,20 +142,23 @@ const Navbar = () => {
                         >
                             <button className={navLink}>Services</button>
                             {showDropdownS && (
-                                <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-64">
+                                <div className="absolute -left-12 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-86">
                                     <ul className="py-2">
                                         {[
-                                            "Chilled Water Pipeline Works",
-                                            "Chilled Water Flushing",
-                                            "A/C Maintenance",
-                                            "Compressor Overhauling",
-                                            "Coil Replacements",
+                                            { label: "All Services", path: "/services" },
+                                            { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
+                                            { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
+                                            { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
+                                            { label: "Overhauling & Winding", path: "/services/overhauling-and-winding" },
+                                            { label: "AMC", path: "/services/amc" },
                                         ].map((item, index) => (
-                                            <li
-                                                key={index}
-                                                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm hover:text-emerald-400 text-gray-800 dark:text-gray-200 cursor-pointer"
-                                            >
-                                                {item}
+                                            <li key={index}>
+                                                <Link
+                                                    to={item.path}
+                                                    className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base" } hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-gray-800 dark:text-gray-200`}
+                                                >
+                                                    {item.label}
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>

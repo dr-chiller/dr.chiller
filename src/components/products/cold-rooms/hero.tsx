@@ -1,3 +1,5 @@
+import cold_rooms_1 from "../../../assets/images/products/cold-rooms-1.jpg";
+import cold_rooms_2 from "../../../assets/images/products/cold-rooms-2.jpg";
 const ColdRoomsHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -23,17 +25,17 @@ const ColdRoomsHero = () => {
                 <div className="relative">
                     <div className="overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/cold-rooms-1.jpg"
+                            src={cold_rooms_1}
                             alt="Cold Room"
                             className="w-84 lg:w-100 h-auto object-cover"
                         />
                     </div>
 
-                    <div className="absolute top-35 lg:top-10 left-1 sm:left-9 lg:-left-30 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
+                    <div className="absolute top-36 sm:left-10 lg:-left-32 lg:top-10 overflow-hidden rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-800 transform hover:scale-105 transition duration-500 ease-out">
                         <img
-                            src="/cold-rooms-2.jpg"
+                            src={cold_rooms_2}
                             alt="Ice Block Machine"
-                            className="w-44 sm:w-64 h-auto object-cover"
+                            className="w-64 h-auto object-cover"
                         />
                     </div>
                 </div>

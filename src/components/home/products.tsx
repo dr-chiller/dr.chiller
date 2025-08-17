@@ -1,31 +1,36 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
+import wc from "../../assets/images/products/water-chiller-2.jpg";
+import cr from "../../assets/images/products/chiller-rooms.jpeg";
+import he from "../../assets/images/products/heat-exchangers-1.jpg";
+import ac from "../../assets/images/products/ac-units-2.jpg";
+
 const products = [
     {
         name: "Water Chillers",
         description: "High-performance chillers for all your cooling needs.",
-        image: "/water-chiller-2.jpg",
+        image: wc,
         link: "/products/water-chillers",
     },
     {
         name: "Cold Rooms",
         description: "Energy-efficient cold storage rooms for perishable goods.",
-        image: "/chiller-rooms.jpeg",
+        image: cr,
         link: "/products/cold-rooms",
     },
     {
         name: "Heat Exchangers",
         description:
             "Reliable heat exchangers to optimize energy transfer processes.",
-        image: "/heat-exchangers-1.jpg",
+        image: he,
         link: "/products/heat-exchangers",
     },
     {
         name: "A/C Units",
         description:
             "Efficient air conditioning systems designed for comfort and reliability.",
-        image: "/ac-units-2.jpg",
+        image: ac,
         link: "/products/ac-units",
     },
 ];

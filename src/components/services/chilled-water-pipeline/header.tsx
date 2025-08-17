@@ -1,16 +1,16 @@
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-export default function HeatExchangersHeader() {
+export default function ChilledWaterPipelineHeader() {
     const navigate = useNavigate();
 
     return (
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/heat-exchangers-header.jpg')`,
+                backgroundImage: `url('/chilled-water-pipeline-header.jpg')`,
                 backgroundSize: "cover",
-                backgroundPosition: "bottom",
+                backgroundPosition: "center",
                 backgroundAttachment: "fixed",
             }}
         >
@@ -25,7 +25,7 @@ export default function HeatExchangersHeader() {
 
             <div className="relative z-10 px-4">
                 <h1 className="text-3xl sm:text-5xl font-bold drop-shadow-lg">
-                    Heat Exchangers & Cooling Towers
+                    Chilled Water Pipeline & Flushing
                 </h1>
             </div>
         </section>

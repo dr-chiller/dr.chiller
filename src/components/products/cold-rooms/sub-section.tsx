@@ -1,3 +1,5 @@
+import ice_black_machine from "../../../assets/images/products/ice-block-machine.jpg";
+
 const ColdRoomsSubSection = () => {
     return (
         <section className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16">
@@ -6,7 +8,7 @@ const ColdRoomsSubSection = () => {
             <div className="flex-1">
                 <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:scale-105">
                     <img
-                        src="/ice-block-machine.jpg"
+                        src={ice_black_machine}
                         alt="Ice Block Machine"
                         className="w-full h-80 object-cover"
                     />

@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
+import wc from "../../assets/images/products/water-chiller-2.jpg";
+import cr from "../../assets/images/products/chiller-rooms.jpeg";
+import he from "../../assets/images/products/heat-exchangers-1.jpg";
+import ac from "../../assets/images/products/ac-units-2.jpg";
+
 const allProducts = [
-    { name: "Water Chillers", link: "/products/water-chillers", image: "/water-chiller-2.jpg" },
-    { name: "Cold Rooms", link: "/products/cold-rooms", image: "/chiller-rooms.jpeg" },
-    { name: "Heat Exchangers", link: "/products/heat-exchangers", image: "/heat-exchangers-1.jpg" },
-    { name: "A/C Units", link: "/products/ac-units", image: "/ac-units-2.jpg" }
+    { name: "Water Chillers", link: "/products/water-chillers", image: wc },
+    { name: "Cold Rooms", link: "/products/cold-rooms", image: cr },
+    { name: "Heat Exchangers", link: "/products/heat-exchangers", image: he },
+    { name: "A/C Units", link: "/products/ac-units", image: ac }
 ];
 
 type RelatedProps = { current: string };

@@ -2,12 +2,19 @@ import { Snowflake, Droplets, Wrench, Gauge, AirVent, Mail } from "lucide-react"
 import { MdEco } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+import wc1 from "../../../assets/images/products/air-cooled-industrial-water-chiller.jpg";
+import wc2 from "../../../assets/images/products/air-cooled-domestic-water-chiller.jpg";
+import wc3 from "../../../assets/images/products/water-cooled-industrial-water-chiller.webp";
+import wc4 from "../../../assets/images/products/water-chiller-custom-made.png";
+import wc5 from "../../../assets/images/products/water-chiller-price-range.png";
+import wc6 from "../../../assets/images/products/water-chiller-capacity-range.jpg";
+
 const products = [
     {
         title: "Air Cooled Industrial Water Chiller",
         blurb: "Rugged, Energy-efficient chillers engineered for 24/7 industrial duty.",
         icon: <Snowflake size={40} />,
-        image: "/air-cooled-industrial-water-chiller.jpg",
+        image: wc1,
         bullets: [
             "Processes: plastic injection, water-jet cutting, printing, bakery",
             "Facilities: hospitals, laundries, ice-making plants",
@@ -20,7 +27,7 @@ const products = [
         title: "Air Cooled Domestic Water Chiller",
         blurb: "Quiet, compact solutions for comfort and light-commercial cooling.",
         icon: <AirVent size={40} />,
-        image: "/air-cooled-domestic-water-chiller.jpg",
+        image: wc2,
         bullets: [
             "Applications: villas, schools, labour camps, gyms, auditoriums",
             "Hotels & construction site cabins",
@@ -33,7 +40,7 @@ const products = [
         title: "Water Cooled Industrial Water Chiller",
         blurb: "High efficiency where condenser water is available or seawater duty applies.",
         icon: <Droplets size={40} />,
-        image: "/water-cooled-industrial-water-chiller.webp",
+        image: wc3,
         bullets: [
             "Marine duty: boats, ships, coastal plants",
             "Ideal for sites with cooling towers or seawater loops",
@@ -46,7 +53,7 @@ const products = [
         title: "Custom-Made Systems",
         blurb: "Built-to-fit units tailored to your space, load profile, and controls.",
         icon: <Wrench size={40} />,
-        image: "/water-chiller-custom-made.png",
+        image: wc4,
         bullets: [
             "Footprint-optimized frames & coil geometry",
             "PLC/BMS integration, VFD pumps, twin circuits",
@@ -59,7 +66,7 @@ const products = [
         title: "Economic → Premium Range",
         blurb: "From value builds to premium components for maximum lifecycle ROI.",
         icon: <MdEco size={40} />,
-        image: "/water-chiller-price-range.png",
+        image: wc5,
         bullets: [
             "Choice of compressors: scroll, screw, semi-hermetic",
             "Options: EC fans, microchannel coils, smart controls",
@@ -72,7 +79,7 @@ const products = [
         title: "Wide Capacity & Temperature Range",
         blurb: "Match any load with precise temperature control across seasons.",
         icon: <Gauge size={40} />,
-        image: "/water-chiller-capacity-range.jpg",
+        image: wc6,
         specs: {
             capacity: "1.5 - 200 TR",
             temp: "-5°C to +40°C",

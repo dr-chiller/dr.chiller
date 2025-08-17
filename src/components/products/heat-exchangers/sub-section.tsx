@@ -1,3 +1,5 @@
+import cooling_tower from "../../../assets/images/products/cooling-tower.jpg";
+
 const HeatExchangersSubSection = () => {
     return (
         <section className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16 rounded-2xl shadow-lg">
@@ -5,7 +7,7 @@ const HeatExchangersSubSection = () => {
             <div className="flex-1">
                 <div className="overflow-hidden rounded-xl shadow-md transition-transform duration-500 hover:scale-105">
                     <img
-                        src="/cooling-tower.jpg"
+                        src={cooling_tower}
                         alt="Cooling Tower"
                         className="w-full h-80 object-cover"
                     />
