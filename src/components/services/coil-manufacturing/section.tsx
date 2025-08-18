@@ -1,4 +1,4 @@
-import { Wrench, Droplets, ShieldCheck, Repeat2 } from "lucide-react";
+import { Wrench, Droplets, ShieldCheck, Repeat2, Mail } from "lucide-react";
 
 import coil_replace from "../../../assets/images/services/coil-replacement.jpg";
 import anti_corrosion from "../../../assets/images/services/coil-anti-corrosion-coating.jpg";
@@ -6,6 +6,7 @@ import gas_recovery from "../../../assets/images/services/coil-gas-recovery.jpg"
 import brazing from "../../../assets/images/services/coil-copper-brazing.jpg";
 import pressure_test from "../../../assets/images/services/coil-nitrogen-pressure-testing.jpg";
 import vacuum_charge from "../../../assets/images/services/coil-scrap.jpg";
+import { Link } from "react-router-dom";
 
 const coilServices = [
     {
@@ -85,7 +86,7 @@ const coilServices = [
 const CoilManufacturingSections = () => {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-10">
                     Coil Manufacturing & Replacement Services
                 </h2>
@@ -127,6 +128,15 @@ const CoilManufacturingSections = () => {
                         </div>
                     ))}
                 </div>
+                <Link
+                    to="/contact-us"
+                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
+                >
+                    <Mail />
+                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
+                        Contact Us
+                    </span>
+                </Link>
             </div>
         </section>
     );

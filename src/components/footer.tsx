@@ -48,11 +48,11 @@ const Footer = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                         {[
-                            { name: "Chilled Water Pipeline Works", link: "/services#pipeline-works" },
-                            { name: "Chilled Water Flushing", link: "/services#flushing" },
-                            { name: "A/C Maintenance", link: "/services#ac-maintenance" },
-                            { name: "Coil Replacements", link: "/services#coil-replacements" },
-                            { name: "Compressor Overhauling", link: "/services#compressor-overhauling" }
+                            { name: "Chilled Water Pipeline & Flushing", link: "/services/chilled-water-pipeline-and-flushing" },
+                            { name: "A/C, Chiller & Coldroom Maintenance", link: "/services/ac-chiller-coldroom-maintenance" },
+                            { name: "Coil Manufacturig & Replacements", link: "/services/coil-manufacturing-and-replacement" },
+                            { name: "Overhauling & Winding", link: "/services/overhauling-and-winding" },
+                            { name: "AMC", link: "/services/amc" },
                         ].map((item, i) => (
                             <li key={i}>
                                 <Link

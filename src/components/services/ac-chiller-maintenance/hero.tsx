@@ -24,7 +24,7 @@ const MaintenanceHero = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="relative flex justify-center gap-10 mr-50 md:mr-50 lg:mr-40 pb-20">
+                    <div className="relative flex justify-center gap-10 mr-45 md:mr-50 lg:mr-40 pb-20">
                         <div className="overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img
                                 src={maintenance_1}

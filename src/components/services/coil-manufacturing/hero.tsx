@@ -26,7 +26,7 @@ const CoilManufacturingHero = () => {
 
                 {/* Images */}
                 <div className="flex justify-end">
-                    <div className="relative flex justify-center gap-10 sm:mr-36 md:mr-2 lg:mr-20 pb-20">
+                    <div className="relative flex justify-center gap-10 mr-0 sm:mr-36 md:mr-2 lg:mr-20 pb-20">
                         {/* First Image */}
                         <div className="overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img

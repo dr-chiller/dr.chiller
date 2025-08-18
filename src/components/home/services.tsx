@@ -2,41 +2,43 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
+
+import chilledWaterImg from "../../assets/images/services/pipe-insulation.jpg";
+import maintenanceImg from "../../assets/images/services//maintenance-replacement.jpg";
+import coilImg from "../../assets/images/services/coil-anti-corrosion-coating.jpg";
+import overhaulingImg from "../../assets/images/services/overhauling-motor-winding.jpg";
+import amcImg from "../../assets/images/services/amc-contract.jpg";
+
 const services = [
     {
-        name: "Chilled Water Pipeline Works",
-        description:
-            "Design and installation of efficient chilled water piping for your desired projects.",
-        image: "/hero1.jpeg",
-        link: "/services#pipeline-works",
+        name: "Chilled Water Pipeline & Flushing",
+        description: "Comprehensive chilled water pipeline installation, flushing and commissioning services.",
+        image: chilledWaterImg,
+        link: "/services/chilled-water-pipeline-flushing",
     },
     {
-        name: "Chilled Water Flushing",
-        description:
-            "Professional flushing services to ensure your chilled water systems run at peak performance.",
-        image: "/hero1.jpeg",
-        link: "/services#flushing",
+        name: "A/C, Chiller & Coldroom Maintenance",
+        description: "Routine maintenance and servicing for A/Cs, chillers and cold rooms for optimal performance.",
+        image: maintenanceImg,
+        link: "/services/maintenance",
     },
     {
-        name: "AC Maintenance",
-        description:
-            "Comprehensive maintenance services to keep your air conditioning units operating efficiently.",
-        image: "/hero1.jpeg",
-        link: "/services#ac-maintenance",
+        name: "Coil Manufacturing & Replacements",
+        description: "Custom coil manufacturing and replacement services for various cooling systems.",
+        image: coilImg,
+        link: "/services/coil-manufacturing",
     },
     {
-        name: "Compressor Overhauling",
-        description:
-            "Expert overhauling services to extend the lifespan and efficiency of your compressors.",
-        image: "/hero1.jpeg",
-        link: "/services#compressor-overhauling",
+        name: "Overhauling & Winding",
+        description: "Professional overhauling and winding services to extend equipment lifespan.",
+        image: overhaulingImg,
+        link: "/services/overhauling-winding",
     },
     {
-        name: "Coil Replacements",
-        description:
-            "Quick and efficient coil replacement services to fully restore optimal cooling performance.",
-        image: "/hero1.jpeg",
-        link: "/services#coil-replacements",
+        name: "AMC",
+        description: "Annual Maintenance Contracts providing long-term coverage and priority service support.",
+        image: amcImg,
+        link: "/services/amc",
     },
 ];
 
@@ -92,8 +94,8 @@ const Services = () => {
                         <SwiperSlide key={index}>
                             <div
                                 className={`bg-gray-100 dark:bg-gray-950 rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:hover:shadow-xl transition transform hover:-translate-y-1 flex flex-col h-[400px] ${isVisible
-                                        ? "animate-[fadeInUp_0.8s_ease-out_forwards]"
-                                        : "opacity-0"
+                                    ? "animate-[fadeInUp_0.8s_ease-out_forwards]"
+                                    : "opacity-0"
                                     }`}
                                 style={{ animationDelay: `${index * 0.15}s` }}
                             >

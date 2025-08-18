@@ -1,0 +1,141 @@
+import { Wrench, ShieldCheck, Repeat2, Mail } from "lucide-react";
+
+import amc_1 from "../../../assets/images/services/amc-contract.jpg";
+import amc_2 from "../../../assets/images/services/amc-multi-sector.jpg";
+import amc_3 from "../../../assets/images/services/amc-preventive-maintenance.jpg";
+import amc_4 from "../../../assets/images/services/amc-breakdown-maintenance.jpeg";
+import amc_5 from "../../../assets/images/services/amc-priority.jpg";
+import amc_6 from "../../../assets/images/services/amc-parts-replacement.jpg";
+import { Link } from "react-router-dom";
+
+const amcServices = [
+    {
+        title: "Annual Maintenance Contract",
+        icon: <ShieldCheck size={32} />,
+        image: amc_1,
+        blurb:
+            "Comprehensive AMC plans for chillers, cold rooms and all types of AC units — ensuring uninterrupted performance throughout the year.",
+        bullets: [
+            "With or without materials",
+            "Includes preventive & breakdown maintenance",
+            "Priority support available",
+        ],
+    },
+    {
+        title: "Multi-Sector Coverage",
+        icon: <ShieldCheck size={32} />,
+        image: amc_2,
+        blurb:
+            "Tailored AMC packages for villas, schools, fisheries, apartments, factories and hospitals.",
+        bullets: [
+            "Residential & commercial facilities",
+            "Customised visit schedules",
+            "24/7 service response (optional)",
+        ],
+    },
+    {
+        title: "Preventive Maintenance",
+        icon: <Wrench size={32} />,
+        image: amc_3,
+        blurb:
+            "Scheduled inspections and servicing to avoid expensive downtime and keep your systems running efficiently.",
+        bullets: [
+            "Filter cleaning and condenser wash",
+            "Operational parameter checks",
+            "Performance optimisation",
+        ],
+    },
+    {
+        title: "Breakdown Maintenance",
+        icon: <Repeat2 size={32} />,
+        image: amc_4,
+        blurb:
+            "Rapid fault diagnosis and rectification for any sudden system breakdown or technical failure.",
+        bullets: [
+            "On-site troubleshooting",
+            "Component repair / replacement",
+            "Minimum turnaround time",
+        ],
+    },
+    {
+        title: "Priority Support",
+        icon: <ShieldCheck size={32} />,
+        image: amc_5,
+        blurb:
+            "Get access to our priority support channel for faster response and guaranteed call attendance.",
+        bullets: [
+            "Fast dispatch of technicians",
+            "Emergency service option",
+            "Higher SLA commitment",
+        ],
+    },
+    {
+        title: "Parts Replacement",
+        icon: <Wrench size={32} />,
+        image: amc_6,
+        blurb:
+            "Replacement of worn-out or damaged parts as part of the AMC scope. Both OEM and compatible parts available.",
+        bullets: [
+            "Compressors, motors & fans",
+            "Valves, controls & sensors",
+            "Flexible material options",
+        ],
+    },
+];
+
+const AMCSections = () => {
+    return (
+        <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-10">
+                    AMC Services - What's Included
+                </h2>
+
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {amcServices.map((item, idx) => (
+                        <div
+                            key={idx}
+                            className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800
+                        p-3 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80 transition-all"
+                        >
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-36 object-cover rounded-md mb-4 group-hover:scale-105 transition-transform duration-500"
+                            />
+
+                            <div className="flex items-center gap-3 mb-4 text-emerald-600 dark:text-emerald-400">
+                                {item.icon}
+                                <span className="text-lg font-semibold">{item.title}</span>
+                            </div>
+
+                            <p className="text-base mb-3 text-gray-700 dark:text-gray-300">
+                                {item.blurb}
+                            </p>
+
+                            <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-base">
+                                {item.bullets.map((b, i) => (
+                                    <li key={i} className="flex items-start gap-2">
+                                        <span className="text-emerald-500">❄</span>
+                                        <span>{b}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <Link
+                    to="/contact-us"
+                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
+                >
+                    <Mail />
+                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
+                        Contact Us
+                    </span>
+                </Link>
+            </div>
+        </section>
+    );
+};
+
+export default AMCSections;

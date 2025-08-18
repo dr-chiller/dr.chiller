@@ -15,6 +15,7 @@ import ACAndChillerMaintenance from "./pages/services/maintenance";
 import CoilManufacturingAndReplacement from "./pages/services/coil-manufacturing";
 import OverhaulingAndWinding from "./pages/services/overhauling";
 import AMC from "./pages/services/amc";
+import Services from "./pages/services/services";
 
 function App() {
   const location = useLocation();
@@ -35,11 +36,13 @@ function App() {
         <Route path="/products/heat-exchangers" element={<HeatExchangers />} />
         <Route path="/products/ac-units" element={<ACUnits />} />
 
+        <Route path="/services" element={ <Services /> } />
         <Route path="/services/chilled-water-pipeline-and-flushing" element={ <ChilledWaterPipelineAndFlushing /> } />
         <Route path="/services/ac-chiller-coldroom-maintenance" element={ <ACAndChillerMaintenance /> } />
         <Route path="/services/coil-manufacturing-and-replacement" element={ <CoilManufacturingAndReplacement /> } />
         <Route path="/services/overhauling-and-winding" element={ <OverhaulingAndWinding /> } />
         <Route path="/services/amc" element={ <AMC /> } />
+        
       </Routes>
       <Footer />
     </>

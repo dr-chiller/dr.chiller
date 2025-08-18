@@ -1,4 +1,4 @@
-import { Wrench, RefreshCcw, Repeat2 } from "lucide-react";
+import { Wrench, RefreshCcw, Repeat2, Mail } from "lucide-react";
 
 import semi_sealed from "../../../assets/images/services/overhauling-semi-sealed-compressor.jpg";
 import oil_topup from "../../../assets/images/services/overhauling-oil-refilling.jpg";
@@ -6,6 +6,7 @@ import rewinding from "../../../assets/images/services/overhauling-motor-winding
 import used_parts from "../../../assets/images/services/overhauling-used-fan-parts.jpg";
 import dismantling from "../../../assets/images/services/overhauling-compressor-dismantling.jpg";
 import refurbish from "../../../assets/images/services/overhauling-compressor-refurbishing.jpg";
+import { Link } from "react-router-dom";
 
 const overhaulingServices = [
     {
@@ -13,7 +14,7 @@ const overhaulingServices = [
         image: semi_sealed,
         icon: <Wrench size={32} />,
         blurb:
-        "Replacement of worn-out internal components in semi-sealed compressors to restore full operational reliability.",
+            "Replacement of worn-out internal components in semi-sealed compressors to restore full operational reliability.",
         bullets: [
             "Rotors / bearings / seals",
             "OEM-grade spare parts",
@@ -25,7 +26,7 @@ const overhaulingServices = [
         image: oil_topup,
         icon: <RefreshCcw size={32} />,
         blurb:
-        "Proper oil top-up and replacement using high-grade 3GS / 4GS oils to ensure safe compressor operation and lubrication.",
+            "Proper oil top-up and replacement using high-grade 3GS / 4GS oils to ensure safe compressor operation and lubrication.",
         bullets: [
             "Oil draining and refilling",
             "Suitable for all compressor types",
@@ -37,7 +38,7 @@ const overhaulingServices = [
         image: rewinding,
         icon: <Repeat2 size={32} />,
         blurb:
-        "Rewinding of compressor and fan motors using heat-resistant insulation and high-quality copper wire.",
+            "Rewinding of compressor and fan motors using heat-resistant insulation and high-quality copper wire.",
         bullets: [
             "Motor inspection and dismantle",
             "Re-winding and varnish treatment",
@@ -49,7 +50,7 @@ const overhaulingServices = [
         image: used_parts,
         icon: <Wrench size={32} />,
         blurb:
-        "Cost-effective replacement of fan motors and compressor components from tested and verified used stock.",
+            "Cost-effective replacement of fan motors and compressor components from tested and verified used stock.",
         bullets: [
             "Refurbished OEM motors",
             "Budget-friendly spare parts",
@@ -61,7 +62,7 @@ const overhaulingServices = [
         image: dismantling,
         icon: <Wrench size={32} />,
         blurb:
-        "Professional dismantling and removal of failed compressors prior to replacement or overhaul.",
+            "Professional dismantling and removal of failed compressors prior to replacement or overhaul.",
         bullets: [
             "Safe removal procedures",
             "Environmental gas recovery",
@@ -85,7 +86,7 @@ const overhaulingServices = [
 const OverhaulingSections = () => {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-10">
                     Compressor Overhauling & Rewinding Services
                 </h2>
@@ -127,6 +128,15 @@ const OverhaulingSections = () => {
                         </div>
                     ))}
                 </div>
+                <Link
+                    to="/contact-us"
+                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
+                >
+                    <Mail />
+                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
+                        Contact Us
+                    </span>
+                </Link>
             </div>
         </section>
     );
