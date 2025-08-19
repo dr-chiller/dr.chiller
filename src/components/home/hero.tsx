@@ -71,7 +71,7 @@ const slides = [
     },
 ];
 
-const Hero = () => {
+const HomeHero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Preload all images once
@@ -191,4 +191,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default HomeHero;

@@ -17,8 +17,9 @@ import OverhaulingAndWinding from "./pages/services/overhauling";
 import AMC from "./pages/services/amc";
 import Services from "./pages/services/services";
 import FloatingActions from "./components/contact-buttons";
-import Rentals from "./components/home/rentals";
+import Rentals from "./pages/services/rentals";
 import ContactUs from "./pages/contact-us";
+import NotFound404 from "./pages/404";
 
 function App() {
   const location = useLocation();
@@ -47,6 +48,8 @@ function App() {
         <Route path="/services/coil-manufacturing-and-replacement" element={ <CoilManufacturingAndReplacement /> } />
         <Route path="/services/overhauling-and-winding" element={ <OverhaulingAndWinding /> } />
         <Route path="/services/amc" element={ <AMC /> } />
+
+        <Route path="*" element={ <NotFound404 /> } />
       </Routes>
       <FloatingActions />
       <Footer />

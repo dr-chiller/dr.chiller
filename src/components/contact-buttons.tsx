@@ -29,7 +29,7 @@ const FloatingActions = () => {
 
                     {/* Contact Page */}
                     <Link
-                        to="/contact"
+                        to="/contact-us"
                         className="flex items-center gap-1 rounded-full bg-emerald-500 px-3 py-2 text-white hover:bg-emerald-600 transition shadow"
                         title="Contact Page"
                     >
@@ -75,7 +75,7 @@ const FloatingActions = () => {
 
                     {/* Call */}
                     <a
-                        href="tel:+919000000000"
+                        href="tel:+97167434537"
                         className="flex items-center gap-1 rounded-full bg-emerald-500 px-3 py-2 text-white hover:bg-emerald-600 transition shadow"
                         title="Call"
                     >
@@ -105,7 +105,6 @@ const FloatingActions = () => {
                 title="Contact"
             >
                 {open ? (
-                    // Cross icon when opened
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6"
@@ -117,7 +116,6 @@ const FloatingActions = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 ) : (
-                    // Phone icon when closed
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6"

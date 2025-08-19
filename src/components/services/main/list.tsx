@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import rentalImg from "../../../assets/images/services/rental-ac.jpg";
 import chilledWaterImg from "../../../assets/images/services/pipe-insulation.jpg";
 import maintenanceImg from "../../../assets/images/services//maintenance-replacement.jpg";
 import coilImg from "../../../assets/images/services/coil-anti-corrosion-coating.jpg";
@@ -8,6 +9,12 @@ import amcImg from "../../../assets/images/services/amc-contract.jpg";
 
 export default function ServicesList() {
     const services = [
+        {
+            name: "Rentals",
+            description: "Short and long-term rental solutions for ACs, chillers and diesel gensets.",
+            image: rentalImg,
+            link: "/services/rentals",
+        },
         {
             name: "Chilled Water Pipeline & Flushing",
             description: "Comprehensive chilled water pipeline installation, flushing and commissioning services.",

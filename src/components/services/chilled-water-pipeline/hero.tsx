@@ -24,16 +24,16 @@ const ChilledWaterPipelineHero = () => {
                 </div>
 
                 <div className="flex justify-end">
-                    <div className="relative flex justify-center gap-10 mr-0 sm:mr-34 md:mr-2 lg:mr-20 pb-20">
+                    <div className="relative flex justify-center gap-2 sm:gap-10 mr-0 sm:mr-34 md:mr-2 lg:mr-20 pb-20">
                         <div className="overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img
                                 src={pipeline_1}
-                                alt="Pipeline Works"
+                                alt="Pipeline Works"    
                                 className="w-40 h-72 object-cover"
                             />
                         </div>
 
-                        <div className="absolute -left-45 sm:-left-50 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
+                        <div className="absolute -left-40 sm:-left-50 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img
                                 src={pipeline_2}
                                 alt="Pipeline Service"

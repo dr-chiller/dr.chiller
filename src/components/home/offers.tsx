@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaExchangeAlt, FaTools, FaWarehouse, FaHeadset } from "react-icons/fa";
 
-const Offers = () => {
+const HomeOffers = () => {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -102,4 +102,4 @@ const Offers = () => {
     );
 };
 
-export default Offers;
+export default HomeOffers;

@@ -35,7 +35,7 @@ const products = [
     },
 ];
 
-const Products = () => {
+const HomeProducts = () => {
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -114,4 +114,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default HomeProducts;

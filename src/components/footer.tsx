@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="relative bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.4fr_1.6fr] gap-8">
                 {/* Brand & Description */}
                 <div>
                     <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-4">
@@ -101,8 +100,9 @@ const Footer = () => {
                         <li className="flex gap-2">
                             <MdLocationOn size={20} className="text-emerald-500" />
                             <span className="font-semibold">Address:</span>
-                            <span>CTS - Chiller Technical Services LLC.<br />
-                                Industrial Area # 02<br />
+                            <span>CTS -
+                                Chiller Technical Services LLC.<br />
+                                Industrial Area # 02.<br />
                                 Ajman, UAE.</span>
                         </li>
                     </ul>

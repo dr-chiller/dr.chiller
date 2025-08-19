@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 
+import rentalImg from "../../assets/images/services/rental-ac.jpg";
 import chilledWaterImg from "../../assets/images/services/pipe-insulation.jpg";
 import maintenanceImg from "../../assets/images/services//maintenance-replacement.jpg";
 import coilImg from "../../assets/images/services/coil-anti-corrosion-coating.jpg";
@@ -10,6 +11,12 @@ import overhaulingImg from "../../assets/images/services/overhauling-motor-windi
 import amcImg from "../../assets/images/services/amc-contract.jpg";
 
 const services = [
+    {
+        name: "Rentals",
+        description: "Short and long-term rental solutions for ACs, chillers and diesel gensets.",
+        image: rentalImg,
+        link: "/services/rentals",
+    },
     {
         name: "Chilled Water Pipeline & Flushing",
         description: "Comprehensive chilled water pipeline installation, flushing and commissioning services.",
@@ -42,7 +49,7 @@ const services = [
     },
 ];
 
-const Services = () => {
+const HomeServices = () => {
     const sectionRef = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -145,4 +152,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default HomeServices;
