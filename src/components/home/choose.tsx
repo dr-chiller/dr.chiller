@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaAward, FaUsers, FaCogs, FaClock } from "react-icons/fa";
 import about1 from "/about1.jpeg";
 import about2 from "/about2.jpeg";
+import { Snowflake } from "lucide-react";
 
 const HomeChoose = () => {
     const sectionRef = useRef(null);
@@ -50,13 +51,16 @@ const HomeChoose = () => {
                                    transition-all duration-1000 delay-200 ease-out
                                    ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
                     />
+                    <Snowflake
+                        size={140}
+                        className="absolute -top-16 -left-6 md:-top-16 md:-left-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
+                    />
                 </div>
 
                 {/* Right Side - Text & Reasons */}
                 <div
-                    className={`transition-all duration-1000 delay-400 ease-out
-                        ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-                >
+                    className={`relative transition-all duration-1000 delay-400 ease-out
+                        ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`} >
                     <h2 className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-6">
                         Why Choose Us
                     </h2>
@@ -88,7 +92,10 @@ const HomeChoose = () => {
                             </div>
                         ))}
                     </div>
-
+                    <Snowflake
+                        size={140}
+                        className="absolute -bottom-22 md:-bottom-22 right-2 md:right-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
+                    />
                     <button className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-md transition-all">
                         About Us
                     </button>
