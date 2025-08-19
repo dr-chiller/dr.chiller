@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="relative bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 {/* Brand & Description */}
                 <div>
@@ -48,6 +48,7 @@ const Footer = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                         {[
+                            { name: "Rentals", link: "/services/rentals" },
                             { name: "Chilled Water Pipeline & Flushing", link: "/services/chilled-water-pipeline-and-flushing" },
                             { name: "A/C, Chiller & Coldroom Maintenance", link: "/services/ac-chiller-coldroom-maintenance" },
                             { name: "Coil Manufacturig & Replacements", link: "/services/coil-manufacturing-and-replacement" },
@@ -89,18 +90,20 @@ const Footer = () => {
                             <MdPhone size={20} className="text-emerald-500" />
                             <span className="font-semibold">Phone:</span>
                             <a
-                                href="tel:+1234567890"
+                                href="tel:+97167434537"
                                 className="hover:text-emerald-500 relative group"
                             >
-                                +1 234 567 890
+                                +971 67434537
                                 <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
 
-                        <li className="flex items-center gap-2">
+                        <li className="flex gap-2">
                             <MdLocationOn size={20} className="text-emerald-500" />
                             <span className="font-semibold">Address:</span>
-                            <span>Dubai, Abu Dhabi</span>
+                            <span>CTS - Chiller Technical Services LLC.<br />
+                                Industrial Area # 02<br />
+                                Ajman, UAE.</span>
                         </li>
                     </ul>
                 </div>

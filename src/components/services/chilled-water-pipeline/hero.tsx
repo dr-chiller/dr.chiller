@@ -37,7 +37,7 @@ const ChilledWaterPipelineHero = () => {
                             <img
                                 src={pipeline_2}
                                 alt="Pipeline Service"
-                                className="w-40 h-72 object-cover"
+                                className="w-35 sm:w-40 h-72 object-cover"
                             />
                         </div>
                     </div>

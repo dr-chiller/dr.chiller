@@ -1,5 +1,4 @@
-import { Fan, Wrench, RefreshCcw, Settings2, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Fan, Wrench, RefreshCcw, Settings2 } from "lucide-react";
 
 import ac1 from "../../../assets/images/products/ac-units.jpg";
 import ac2 from "../../../assets/images/products/ac-temperature-range.jpg";
@@ -61,7 +60,7 @@ const acUnitProducts = [
 const ACUnitsSections = () => {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-gray-800 dark:text-gray-200 font-bold text-3xl pb-8 text-center">
                     Air Conditioning Units
                 </h2>
@@ -103,15 +102,6 @@ const ACUnitsSections = () => {
                         </article>
                     ))}
                 </div>
-                <Link
-                    to="/contact-us"
-                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
-                >
-                    <Mail />
-                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
-                        Contact Us
-                    </span>
-                </Link>
             </div>
         </section>
     );

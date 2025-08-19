@@ -146,6 +146,7 @@ const Navbar = () => {
                                     <ul className="py-2">
                                         {[
                                             { label: "All Services", path: "/services" },
+                                            { label: "Rentals", path: "/services/rentals" },
                                             { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
                                             { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
                                             { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
@@ -167,15 +168,6 @@ const Navbar = () => {
                         </div>
 
                         <NavLink
-                            to="/rentals"
-                            className={({ isActive }) =>
-                                `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
-                            }
-                        >
-                            Rentals
-                        </NavLink>
-
-                        <NavLink
                             to="/contact-us"
                             className={({ isActive }) =>
                                 `${navLink} ${isActive ? "text-green-400 dark:text-green-400 font-semibold" : ""}`
@@ -186,7 +178,7 @@ const Navbar = () => {
 
                         {/* Search with Tooltip */}
                         <div className="relative group">
-                            <NavLink to="/search" className={navLink}>
+                            <NavLink to="/" className={navLink}>
                                 <BiSearch size={20} />
                             </NavLink>
                             <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition pointer-events-none">
@@ -212,6 +204,7 @@ const Navbar = () => {
                 <div className="md:hidden px-4 py-4 space-y-3 bg-white dark:bg-gray-900">
                     <NavLink
                         to="/"
+                        onClick={() => setMobileMenuOpen(false)}
                         className={({ isActive }) =>
                             `block ${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
                         }
@@ -221,6 +214,7 @@ const Navbar = () => {
 
                     <NavLink
                         to="/about-us"
+                        onClick={() => setMobileMenuOpen(false)}
                         className={({ isActive }) =>
                             `block ${navLink} ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
                         }
@@ -243,6 +237,7 @@ const Navbar = () => {
                                     <li key={index}>
                                         <Link
                                             to={item.path}
+                                            onClick={() => setMobileMenuOpen(false)}
                                             className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-emerald-600 dark:text-gray-200`}
                                         >
                                             {item.label}
@@ -259,6 +254,7 @@ const Navbar = () => {
                             <ul className="ml-4 mt-2 space-y-2">
                                 {[
                                     { label: "All Services", path: "/services" },
+                                    { label: "Rentals", path: "/services/rentals" },
                                     { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
                                     { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
                                     { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
@@ -268,6 +264,7 @@ const Navbar = () => {
                                     <li key={index}>
                                         <Link
                                             to={item.path}
+                                            onClick={() => setMobileMenuOpen(false)}
                                             className={`block px-4 py-2 ${index === 0 ? "text-base font-medium" : "text-base"} hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-emerald-400 text-emerald-600 dark:text-gray-200`}
                                         >
                                             {item.label}
@@ -279,15 +276,8 @@ const Navbar = () => {
                     </div>
 
                     <NavLink
-                        to="/rentals"
-                        className={({ isActive }) =>
-                            `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
-                        }
-                    >
-                        Rentals
-                    </NavLink>
-                    <NavLink
                         to="/contact-us"
+                        onClick={() => setMobileMenuOpen(false)}
                         className={({ isActive }) =>
                             `block ${navLink} flex items-center gap-1 ${isActive ? "text-blue-700 dark:text-blue-300 font-semibold" : ""}`
                         }

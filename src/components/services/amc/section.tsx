@@ -1,4 +1,4 @@
-import { Wrench, ShieldCheck, Repeat2, Mail } from "lucide-react";
+import { Wrench, ShieldCheck, Repeat2 } from "lucide-react";
 
 import amc_1 from "../../../assets/images/services/amc-contract.jpg";
 import amc_2 from "../../../assets/images/services/amc-multi-sector.jpg";
@@ -6,7 +6,6 @@ import amc_3 from "../../../assets/images/services/amc-preventive-maintenance.jp
 import amc_4 from "../../../assets/images/services/amc-breakdown-maintenance.jpeg";
 import amc_5 from "../../../assets/images/services/amc-priority.jpg";
 import amc_6 from "../../../assets/images/services/amc-parts-replacement.jpg";
-import { Link } from "react-router-dom";
 
 const amcServices = [
     {
@@ -86,7 +85,7 @@ const amcServices = [
 const AMCSections = () => {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 text-center mb-10">
                     AMC Services - What's Included
                 </h2>
@@ -124,15 +123,6 @@ const AMCSections = () => {
                         </div>
                     ))}
                 </div>
-                <Link
-                    to="/contact-us"
-                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
-                >
-                    <Mail />
-                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
-                        Contact Us
-                    </span>
-                </Link>
             </div>
         </section>
     );

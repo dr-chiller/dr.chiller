@@ -1,5 +1,4 @@
-import { Snowflake, Package, Thermometer, Wrench, Gauge, Settings, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Snowflake, Package, Thermometer, Wrench, Gauge, Settings } from "lucide-react";
 
 import cr1 from "../../../assets/images/products/chiller-rooms.jpeg";
 import cr2 from "../../../assets/images/products/freezer-rooms.jpg";
@@ -92,7 +91,7 @@ const coldRoomProducts = [
 export default function ColdRoomsSection() {
     return (
         <section className="py-12 bg-gray-100 dark:bg-gray-950 transition-colors duration-300">
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-gray-800 dark:text-gray-200 font-bold text-3xl pb-8 text-center">
                     Cold Rooms
                 </h2>
@@ -152,15 +151,6 @@ export default function ColdRoomsSection() {
                         </article>
                     ))}
                 </div>
-                <Link
-                    to="/contact-us"
-                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
-                >
-                    <Mail />
-                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
-                        Contact Us
-                    </span>
-                </Link>
             </div>
         </section>
     );

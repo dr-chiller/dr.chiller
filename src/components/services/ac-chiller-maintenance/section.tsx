@@ -1,4 +1,4 @@
-import { Wrench, RefreshCcw, ShieldCheck, Cog, Droplets, Zap, Mail } from "lucide-react";
+import { Wrench, RefreshCcw, ShieldCheck, Cog, Droplets, Zap } from "lucide-react";
 
 import maintenance_installation from "../../../assets/images/services/maintenance-installation.jpg";
 import maintenance_spare_replacement from "../../../assets/images/services/maintenance-replacement.jpg";
@@ -6,7 +6,6 @@ import maintenance_coil from "../../../assets/images/services/maintenance-conden
 import maintenance_duct_cleaning from "../../../assets/images/services/maintenance-duct-cleaning.jpeg";
 import maintenance_panel_rewiring from "../../../assets/images/services/maintenance-electric-panel.jpg";
 import maintenance_water_service from "../../../assets/images/services/maintenance-water-service.jpg";
-import { Link } from "react-router-dom";
 
 const maintenanceServices = [
     {
@@ -68,7 +67,7 @@ const maintenanceServices = [
 const MaintenanceSections = () => {
     return (
         <section className="py-12 bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">
                     Our AC, Chiller & Cold Room Maintenance Services
                 </h2>
@@ -110,15 +109,6 @@ const MaintenanceSections = () => {
                         </div>
                     ))}
                 </div>
-                <Link
-                    to="/contact-us"
-                    className="group fixed z-10 right-4 bottom-24 flex items-center bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition-all duration-300"
-                >
-                    <Mail />
-                    <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap">
-                        Contact Us
-                    </span>
-                </Link>
             </div>
         </section>
     );
