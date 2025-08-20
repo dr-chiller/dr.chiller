@@ -142,12 +142,10 @@ const HomeHero = () => {
                         </div>
                     </div>
 
-                    {/* Spacer to push the slide content down */}
-                    <div className="md:flex-1"></div>
 
                     {/* Slide Content */}
                     <div>
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 mt-30 md:mt-0 font-bold mb-4 font-[Montserrat]">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 mt-30 md:mt-20 font-bold mb-4 font-[Montserrat]">
                             {slides[currentIndex].header}
                         </h1>
 
