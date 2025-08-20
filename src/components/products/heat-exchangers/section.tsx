@@ -13,6 +13,7 @@ const heatExchangerProducts = [
         blurb:
             "Heavy-duty exchangers for oil cooling, process fluids and chilled-water duties.",
         icon: <Layers3 size={36} />,
+        id: "shell-and-tube",
         image: he1,
         bullets: [
             "Straight or U-tube configuration",
@@ -20,12 +21,12 @@ const heatExchangerProducts = [
             "Material options: SS / Copper / Titanium"
         ],
     },
-
     {
         title: "PP & Titanium Constructions",
         blurb:
             "Polypropylene and Titanium builds for aggressive or corrosive chemical media.",
         icon: <Thermometer size={36} />,
+        id: "pp-and-titanium",
         image: he2,
         bullets: [
             "Excellent corrosion resistance",
@@ -50,6 +51,7 @@ const heatExchangerProducts = [
         blurb:
             "Compact, high-efficiency plate type exchangers for clean fluids and hygienic duties.",
         icon: <Layers3 size={36} />,
+        id: "phe",
         image: he4,
         bullets: [
             "Gasketed / brazed / semi-welded types",
@@ -95,6 +97,7 @@ const HeatExchangerSection = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {heatExchangerProducts.map((p, i) => (
                         <article
+                            id={ p.id ? p.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-emerald-500/50 dark:hover:border-emerald-500/80"
                         >

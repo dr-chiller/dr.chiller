@@ -43,10 +43,10 @@ function App() {
 
         <Route path="/services" element={ <Services /> } />
         <Route path="/services/rentals" element={ <Rentals /> }/>
-        <Route path="/services/chilled-water-pipeline-and-flushing" element={ <ChilledWaterPipelineAndFlushing /> } />
-        <Route path="/services/ac-chiller-coldroom-maintenance" element={ <ACAndChillerMaintenance /> } />
-        <Route path="/services/coil-manufacturing-and-replacement" element={ <CoilManufacturingAndReplacement /> } />
-        <Route path="/services/overhauling-and-winding" element={ <OverhaulingAndWinding /> } />
+        <Route path="/services/pipeline" element={ <ChilledWaterPipelineAndFlushing /> } />
+        <Route path="/services/maintenance" element={ <ACAndChillerMaintenance /> } />
+        <Route path="/services/coil" element={ <CoilManufacturingAndReplacement /> } />
+        <Route path="/services/overhauling" element={ <OverhaulingAndWinding /> } />
         <Route path="/services/amc" element={ <AMC /> } />
 
         <Route path="*" element={ <NotFound404 /> } />

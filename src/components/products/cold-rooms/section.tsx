@@ -13,6 +13,7 @@ const coldRoomProducts = [
         blurb:
             "Ideal for fruits, vegetables, flowers, chocolates, and medicines with precise temperature control.",
         icon: <Snowflake size={40} />,
+        id: "chiller-rooms",
         image: cr1,
         bullets: [
             "Maintain freshness and quality",
@@ -26,6 +27,7 @@ const coldRoomProducts = [
         blurb:
             "Designed for fish, meat, and ice cream — perfect for long-term frozen storage.",
         icon: <Package size={40} />,
+        id: "freezer-rooms",
         image: cr2,
         bullets: [
             "Deep freezing capacity",
@@ -39,6 +41,7 @@ const coldRoomProducts = [
         blurb:
             "Rapid cooling and freezing solutions to preserve texture, flavor, and safety.",
         icon: <Thermometer size={40} />,
+        id: "blast-chillers-and-freezers",
         image: cr3,
         bullets: [
             "Fast pull-down temperatures",
@@ -52,6 +55,7 @@ const coldRoomProducts = [
         blurb:
             "Reliable supply and installation for cold room systems of any scale.",
         icon: <Wrench size={40} />,
+        id: "condensers-and-evaporators",
         image: cr4,
         bullets: [
             "Tailored to your cold storage needs",
@@ -98,6 +102,7 @@ export default function ColdRoomsSection() {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {coldRoomProducts.map((p, i) => (
                         <article
+                            id={ p.id ? p.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-emerald-500/50 dark:hover:border-emerald-500/80"
                         >

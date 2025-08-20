@@ -60,6 +60,7 @@ const overhaulingServices = [
         title: "Compressor Dismantling Service",
         image: dismantling,
         icon: <Wrench size={32} />,
+        id: "compressor-dismantling",
         blurb:
             "Professional dismantling and removal of failed compressors prior to replacement or overhaul.",
         bullets: [
@@ -93,6 +94,7 @@ const OverhaulingSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {overhaulingServices.map((item, i) => (
                         <div
+                            id={ item.id ? item.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800
                 p-3 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80 transition-all"

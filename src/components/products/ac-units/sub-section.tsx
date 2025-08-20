@@ -2,7 +2,7 @@ import air_curtain from "../../../assets/images/products/air-curtain.jpg";
 
 const ACUnitsSubSection = () => {
     return (
-        <section className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16 rounded-2xl shadow-lg">
+        <section id="air-curtains" className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16 rounded-2xl shadow-lg">
             {/* Image */}
             <div className="flex-1">
                 <div className="overflow-hidden rounded-xl shadow-md transition-transform duration-500 hover:scale-105">

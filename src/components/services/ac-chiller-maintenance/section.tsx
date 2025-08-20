@@ -36,6 +36,7 @@ const maintenanceServices = [
         title: "Duct Cleaning",
         image: maintenance_duct_cleaning,
         icon: <Cog size={30} />,
+        id: "duct-cleaning",
         blurb: "Thorough duct cleaning to improve air quality and airflow.",
         bullets: [
             "Removal of dust & microbial growth",
@@ -46,6 +47,7 @@ const maintenanceServices = [
         title: "Electric Panel Rewiring",
         image: maintenance_panel_rewiring,
         icon: <Zap size={30} />,
+        id: "electric-panel",
         blurb: "Repair and rewiring of electrical control panels for safe operation.",
         bullets: [
             "Control panel overhauling",
@@ -56,6 +58,7 @@ const maintenanceServices = [
         title: "Gas Leak Arresting & Water Servicing",
         image: maintenance_water_service,
         icon: <Droplets size={30} />,
+        id: "gas-leak-arresting",
         blurb: "Complete refrigerant leak detection and water servicing of systems.",
         bullets: [
             "Leak detection & refrigerant recharge",
@@ -75,6 +78,7 @@ const MaintenanceSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {maintenanceServices.map((s, i) => (
                         <div
+                            id={ s.id ? s.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 rounded-xl p-3 border border-transparent dark:border-gray-800
                 overflow-hidden shadow hover:shadow-lg hover:border-emerald-500/50 dark:hover:border-emerald-500/80

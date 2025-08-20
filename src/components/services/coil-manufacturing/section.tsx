@@ -24,6 +24,7 @@ const coilServices = [
         title: "Anti-Corrosion Coating",
         image: anti_corrosion,
         icon: <ShieldCheck size={32} />,
+        id: "anti-corrosion-coating",
         blurb:
             "Protective coating for coils exposed to corrosive environments (coastal / industrial). Extends service life and improves performance.",
         bullets: [
@@ -36,6 +37,7 @@ const coilServices = [
         title: "Gas Recovery",
         image: gas_recovery,
         icon: <Droplets size={32} />,
+        id: "gas-recovery",
         blurb:
             "Safe recovery of refrigerant gases prior to coil replacement or equipment maintenance.",
         bullets: [
@@ -48,6 +50,7 @@ const coilServices = [
         title: "Copper Brazing",
         image: brazing,
         icon: <Wrench size={32} />,
+        id: "copper-brazing",
         blurb:
             "Professional brazing of copper tubes and joints for leak-free and long-lasting connections.",
         bullets: [
@@ -93,6 +96,7 @@ const CoilManufacturingSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {coilServices.map((item, i) => (
                         <div
+                            id={ item.id ? item.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800
                 p-3 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80 transition-all"

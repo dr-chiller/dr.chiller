@@ -9,6 +9,7 @@ const rentalServices = [
     {
         title: "AC Rental",
         icon: <Airplay size={32} />,
+        id: "ac-rental",
         image: ac_rental,
         blurb:
             "Temporary cooling solutions with free standing, package and air handling units to suit any application.",
@@ -22,6 +23,7 @@ const rentalServices = [
     {
         title: "Chiller Rental",
         icon: <Snowflake size={32} />,
+        id: "chiller-rental",
         image: chiller_rental,
         blurb:
             "High-efficiency chillers for short and long-term rental, with full on-site support.",
@@ -36,6 +38,7 @@ const rentalServices = [
     {
         title: "Genset Rental",
         icon: <Fuel size={32} />,
+        id: "genset-rental",
         image: genset_rental,
         blurb:
             "Reliable diesel generator rental packages including cabling and accessories.",
@@ -59,6 +62,7 @@ const RentalsSections = () => {
                 <div className="grid gap-6 sm:grid-cols=2 lg:grid-cols-3">
                     {rentalServices.map((item, i) => (
                         <div
+                            id={ item.id ? item.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800 p-4 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80 transition-all"
                         >

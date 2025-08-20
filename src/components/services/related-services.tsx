@@ -16,22 +16,22 @@ const allServices = [
     {
         name: "Chilled Water Pipeline & Flushing",
         image: chilledWaterImg,
-        link: "/services/chilled-water-pipeline-and-flushing",
+        link: "/services/pipeline",
     },
     {
         name: "A/C, Chiller & Coldroom Maintenance",
         image: maintenanceImg,
-        link: "/services/ac-chiller-coldroom-maintenance",
+        link: "/services/maintenance",
     },
     {
         name: "Coil Manufacturing & Replacements",
         image: coilImg,
-        link: "/services/coil-manufacturing-and-replacement",
+        link: "/services/coil",
     },
     {
         name: "Overhauling & Winding",
         image: overhaulingImg,
-        link: "/services/overhauling-and-winding",
+        link: "/services/overhauling",
     },
     {
         name: "AMC",

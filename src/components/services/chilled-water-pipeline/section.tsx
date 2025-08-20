@@ -13,6 +13,7 @@ const serviceItems = [
         title: "MS / SS / PPR Pipeline Works",
         image: ms_pipe,
         icon: <PiFlowArrow size={32} />,
+        id: "ms-ss-ppr",
         blurb: "Complete supply and installation of chilled water pipelines using durable MS / SS / PPR materials.",
         bullets: [
             "Custom fabrication & installation",
@@ -24,6 +25,7 @@ const serviceItems = [
         title: "Pipe Insulation",
         image: pipe_insulation,
         icon: <ShieldCheck size={32} />,
+        id: "pipe-insulation",
         blurb: "Thermal insulation for chilled and hot water lines to prevent energy loss and condensation.",
         bullets: [
             "Hot & cold insulation",
@@ -35,6 +37,7 @@ const serviceItems = [
         title: "Chemical Flushing",
         image: chilled_flushing,
         icon: <Droplets size={32} />,
+        id: "chemical-flushing",
         blurb: "Professional chemical flushing to restore pipe flow and remove scale/sludge from chilled-water circuits.",
         bullets: [
             "Removes sludge & scale from chilled water lines",
@@ -57,6 +60,7 @@ const serviceItems = [
         title: "Leak Arresting & Valve Replacement",
         image: pipe_leak,
         icon: <Repeat2 size={32} />,
+        id: "leak-arresting",
         blurb: "On-site repair and sealing of leaks along with replacement of faulty valves and pressure components.",
         bullets: [
             "In-place repair of leaky joints",
@@ -68,6 +72,7 @@ const serviceItems = [
         title: "FCU Installation Works",
         image: pipe_fcu,
         icon: <Wrench size={32} />,
+        id: "fcu",
         blurb: "Supply, installation and commissioning of fan-coil units integrated to existing chilled-water systems.",
         bullets: [
             "Ceiling or floor mounted fan-coil units",
@@ -89,6 +94,7 @@ const ChilledWaterPipelineSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {serviceItems.map((item, i) => (
                         <div
+                            id={ item.id ? item.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800
                          p-3 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80

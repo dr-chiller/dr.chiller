@@ -35,6 +35,7 @@ const amcServices = [
     {
         title: "Preventive Maintenance",
         icon: <Wrench size={32} />,
+        id: "preventive-maintenance",
         image: amc_3,
         blurb:
             "Scheduled inspections and servicing to avoid expensive downtime and keep your systems running efficiently.",
@@ -47,6 +48,7 @@ const amcServices = [
     {
         title: "Breakdown Maintenance",
         icon: <Repeat2 size={32} />,
+        id: "breakdown-maintenance",
         image: amc_4,
         blurb:
             "Rapid fault diagnosis and rectification for any sudden system breakdown or technical failure.",
@@ -93,6 +95,7 @@ const AMCSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {amcServices.map((item, idx) => (
                         <div
+                            id={ item.id ? item.id : "" }
                             key={idx}
                             className="group bg-white dark:bg-gray-900 rounded-xl border border-transparent dark:border-gray-800
                         p-3 shadow hover:shadow-lg hover:border-emerald-500/60 dark:hover:border-emerald-500/80 transition-all"

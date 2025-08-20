@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { BiMoon, BiSearch, BiSun } from "react-icons/bi";
+import { BiMoon, BiSun } from "react-icons/bi";
 import { FiMenu, FiX } from "react-icons/fi";
+import NavbarSearch from "./search";
 
 const Navbar = () => {
     const [isDark, setIsDark] = useState(false);
@@ -67,9 +68,7 @@ const Navbar = () => {
 
                     {/* Hamburger (Mobile) */}
                     <div className="md:hidden flex items-center gap-3">
-                        <NavLink to="/search" className={navLink}>
-                            <BiSearch size={20} />
-                        </NavLink>
+                        <NavbarSearch />
 
                         {/* Theme Toggle */}
                         <button onClick={toggleDark} className={`${navLink} cursor-pointer`}>
@@ -147,10 +146,10 @@ const Navbar = () => {
                                         {[
                                             { label: "All Services", path: "/services" },
                                             { label: "Rentals", path: "/services/rentals" },
-                                            { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
-                                            { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
-                                            { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
-                                            { label: "Overhauling & Winding", path: "/services/overhauling-and-winding" },
+                                            { label: "Chilled Water Pipeline & Flushing", path: "/services/pipeline" },
+                                            { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/maintenance" },
+                                            { label: "Coil Manufacturing & Replacement", path: "/services/coil" },
+                                            { label: "Overhauling & Winding", path: "/services/overhauling" },
                                             { label: "AMC", path: "/services/amc" },
                                         ].map((item, index) => (
                                             <li key={index}>
@@ -176,15 +175,7 @@ const Navbar = () => {
                             Contact Us
                         </NavLink>
 
-                        {/* Search with Tooltip */}
-                        <div className="relative group">
-                            <NavLink to="/" className={navLink}>
-                                <BiSearch size={20} />
-                            </NavLink>
-                            <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition pointer-events-none">
-                                Search
-                            </div>
-                        </div>
+                        <NavbarSearch />
 
                         {/* Theme Toggle with Tooltip */}
                         <div className="relative group">
@@ -255,10 +246,10 @@ const Navbar = () => {
                                 {[
                                     { label: "All Services", path: "/services" },
                                     { label: "Rentals", path: "/services/rentals" },
-                                    { label: "Chilled Water Pipeline & Flushing", path: "/services/chilled-water-pipeline-and-flushing" },
-                                    { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/ac-chiller-coldroom-maintenance" },
-                                    { label: "Coil Manufacturing & Replacement", path: "/services/coil-manufacturing-and-replacement" },
-                                    { label: "Overhauling & Winding", path: "/services/overhauling-and-winding" },
+                                    { label: "Chilled Water Pipeline & Flushing", path: "/services/pipeline" },
+                                    { label: "A/C, Chiller & Cold Room Maintenance", path: "/services/maintenance" },
+                                    { label: "Coil Manufacturing & Replacement", path: "/services/coil" },
+                                    { label: "Overhauling & Winding", path: "/services/overhauling" },
                                     { label: "AMC", path: "/services/amc" },
                                 ].map((item, index) => (
                                     <li key={index}>

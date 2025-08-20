@@ -2,7 +2,7 @@ import ice_black_machine from "../../../assets/images/products/ice-block-machine
 
 const ColdRoomsSubSection = () => {
     return (
-        <section className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16">
+        <section id="ice-block-machine" className="flex flex-col md:flex-row items-center gap-10 py-12 px-6 sm:px-16">
             
             {/* Image Side */}
             <div className="flex-1">

@@ -11,6 +11,7 @@ const acUnitProducts = [
         blurb:
             "Full range of air-conditioning systems for residential, commercial and industrial applications.",
         icon: <Settings2 size={36} />,
+        id: "ac",
         image: ac1,
         bullets: [
             "Split AC / Free-standing type",
@@ -68,6 +69,7 @@ const ACUnitsSections = () => {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {acUnitProducts.map((p, i) => (
                         <article
+                            id={ p.id ? p.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-emerald-500/50 dark:hover:border-emerald-500/80"
                         >

@@ -13,6 +13,7 @@ const products = [
         title: "Air Cooled Industrial Water Chiller",
         blurb: "Rugged, Energy-efficient chillers engineered for 24/7 industrial duty.",
         icon: <Snowflake size={40} />,
+        id: "air-cooled-industrial",
         image: wc1,
         bullets: [
             "Processes: plastic injection, water-jet cutting, printing, bakery",
@@ -26,6 +27,7 @@ const products = [
         title: "Air Cooled Domestic Water Chiller",
         blurb: "Quiet, compact solutions for comfort and light-commercial cooling.",
         icon: <AirVent size={40} />,
+        id: "air-cooled-domestic",
         image: wc2,
         bullets: [
             "Applications: villas, schools, labour camps, gyms, auditoriums",
@@ -39,6 +41,7 @@ const products = [
         title: "Water Cooled Industrial Water Chiller",
         blurb: "High efficiency where condenser water is available or seawater duty applies.",
         icon: <Droplets size={40} />,
+        id: "water-cooled-industrial",
         image: wc3,
         bullets: [
             "Marine duty: boats, ships, coastal plants",
@@ -101,6 +104,7 @@ export default function WaterChillersSections() {
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {products.map((p, i) => (
                         <article
+                            id={p.id ? p.id : "" }
                             key={i}
                             className="group bg-white dark:bg-gray-900 dark:border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-emerald-500/50 dark:hover:border-emerald-500/80"
                         >

@@ -4,6 +4,7 @@ import heat_pump from "../../../assets/images/products/heat-pump.webp";
 type ProductCardProps = {
     title: string;
     image: string;
+    id: string;
     description: string;
     points: string[];
 };
@@ -11,6 +12,7 @@ type ProductCardProps = {
 const ProductCard: React.FC<ProductCardProps> = ({
     title,
     image,
+    id,
     description,
     points,
 }) => {
@@ -26,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
 
             {/* Text */}
-            <div className="p-6 flex flex-col justify-center text-center sm:text-left">
+            <div className="p-6 flex flex-col justify-center text-center sm:text-left" id={id}>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-gray-200">{title}</h3>
                 <p className="text-gray-600 text-base mb-3 text-gray-700 dark:text-gray-300">{description}</p>
                 <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 text-gray-700 dark:text-gray-300">
@@ -52,6 +54,7 @@ const WaterChillersSubSection: React.FC = () => {
                 <ProductCard
                     title="Water Cooler"
                     image={water_cooler}
+                    id="water-cooler"
                     description="Compact and efficient cooling unit designed for domestic and light commercial use — ideal for villas, offices and workspaces that need a constant supply of chilled water."
                     points={[
                         "Energy-efficient cooling",
@@ -63,6 +66,7 @@ const WaterChillersSubSection: React.FC = () => {
                 <ProductCard
                     title="Heat Pump"
                     image={heat_pump}
+                    id="heat-pump"
                     description="Versatile system that provides both cooling and heating all year round. Engineered for high efficiency, it ensures comfortable indoor temperatures while keeping energy costs low."
                     points={[
                         "Dual heating & cooling",

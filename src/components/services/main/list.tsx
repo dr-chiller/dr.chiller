@@ -19,7 +19,7 @@ export default function ServicesList() {
             name: "Chilled Water Pipeline & Flushing",
             description: "Comprehensive chilled water pipeline installation, flushing and commissioning services.",
             image: chilledWaterImg,
-            link: "/services/chilled-water-pipeline-flushing",
+            link: "/services/pipeline",
         },
         {
             name: "A/C, Chiller & Coldroom Maintenance",
@@ -31,13 +31,13 @@ export default function ServicesList() {
             name: "Coil Manufacturing & Replacements",
             description: "Custom coil manufacturing and replacement services for various cooling systems.",
             image: coilImg,
-            link: "/services/coil-manufacturing",
+            link: "/services/coil",
         },
         {
             name: "Overhauling & Winding",
             description: "Professional overhauling and winding services to extend equipment lifespan.",
             image: overhaulingImg,
-            link: "/services/overhauling-winding",
+            link: "/services/overhauling",
         },
         {
             name: "AMC",
