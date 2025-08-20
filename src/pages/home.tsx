@@ -8,7 +8,7 @@ import HomeServices from "../components/home/services";
 const Home = () => {
     return (
         <div>
-            <HomeHero/>
+            {/* <HomeHero/> */}
             <HomeChoose />
             <HomeOffers />
             <HomeProducts />
