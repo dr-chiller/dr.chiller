@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
     {
@@ -76,7 +76,9 @@ const slides = [
 ];
 
 const HomeHero = () => {
+
     const [currentIndex, setCurrentIndex] = useState(0);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
         slides.forEach((slide) => {
@@ -93,13 +95,8 @@ const HomeHero = () => {
     }, []);
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative h-screen overflow-x-hidden overflow-y-hidden"
-        >
-            {/* Background crossfade */}
+        <div ref={sectionRef} className="relative h-screen overflow-hidden">
+            {/* background crossfade */}
             <div className="absolute inset-0 w-screen h-screen">
                 {slides.map((slide, index) => (
                     <div
@@ -118,39 +115,44 @@ const HomeHero = () => {
             <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col md:flex-row w-full h-full pt-12 md:pt-20">
-                {/* Slide content */}
-                <div className="flex flex-col md:w-7/10 h-full text-white px-6 md:px-12">
-
-                    {/* Brand block (slightly above center) */}
-                    <div className="flex-1 flex items-center gap-3">
-                        <img src="/hero1.jpg" className="w-12 h-12 rounded-3xl" alt="Dr.Chiller Logo" />
-                        <div>
-                            <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
-                            <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase">
-                                Skill to Chill
-                            </span>
+            <div className="relative z-10 flex flex-col md:flex-row w-full h-full pt-12 md:pt-16">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentIndex}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="flex flex-col md:w-7/10 h-full text-white px-6 md:px-12"
+                    >
+                        <div className="flex-1 flex items-center gap-3">
+                            <img src="/logo.png" className="w-12 h-12 rounded-3xl" alt="Dr.Chiller Logo" />
+                            <div>
+                                <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
+                                <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase">
+                                    Skill to Chill
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Slide header + text */}
-                    <div className="pb-20 md:pb-10">
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-3">
-                            {slides[currentIndex].header}
-                        </h1>
-                        <p className="text-base sm:text-lg md:text-xl mb-6 max-w-2xl">
-                            {slides[currentIndex].description}
-                        </p>
-                        <Link
-                            to={slides[currentIndex].button}
-                            className="inline-block px-4 py-2 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
-                        >
-                            Explore
-                        </Link>
-                    </div>
-                </div>
+                        <div className="pb-16 md:pb-10">
+                            <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-3">
+                                {slides[currentIndex].header}
+                            </h1>
+                            <p className="text-base sm:text-lg md:text-xl mb-6 max-w-2xl">
+                                {slides[currentIndex].description}
+                            </p>
+                            <Link
+                                to={slides[currentIndex].button}
+                                className="inline-block px-4 py-2 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
+                            >
+                                Explore
+                            </Link>
+                        </div>
+                    </motion.div>
+                </AnimatePresence>
 
-                {/* Right-side list (desktop) */}
+                {/* Desktop list */}
                 <div className="hidden md:flex md:w-3/10 h-full flex-col justify-end space-y-3 p-4">
                     <div className="backdrop-blur rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
                         {slides.map((slide, index) => (
@@ -158,10 +160,10 @@ const HomeHero = () => {
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
                                 className={`w-full text-left px-4 py-2 rounded-md mb-2 shadow transition
-                  ${index === currentIndex
+                ${index === currentIndex
                                         ? "bg-emerald-500 text-white"
                                         : "bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200"}
-                  hover:scale-105`}
+                hover:scale-105`}
                             >
                                 {slide.header}
                             </button>
@@ -169,7 +171,7 @@ const HomeHero = () => {
                     </div>
                 </div>
 
-                {/* Bottom buttons (mobile) */}
+                {/* Mobile buttons */}
                 <div className="md:hidden absolute bottom-2 w-full px-4 flex gap-2 overflow-x-auto no-scrollbar">
                     {slides.map((slide, index) => (
                         <button
@@ -186,7 +188,7 @@ const HomeHero = () => {
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
