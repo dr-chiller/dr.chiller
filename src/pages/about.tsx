@@ -1,11 +1,13 @@
 import AboutHeader from "../components/about/header";
-import Hero from "../components/about/hero";
+import AboutHero from "../components/about/hero";
+import AboutSession from "../components/about/section";
 
 const About = () => {
     return (
         <div>
             <AboutHeader />
-            <Hero />
+            <AboutHero />
+            <AboutSession />
         </div>
     )
 }

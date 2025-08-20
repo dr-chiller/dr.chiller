@@ -1,34 +1,44 @@
 // About.jsx
-export default function Hero() {
+export default function AboutHero() {
     return (
-        <section className="dark:bg-gray-900 dark:text-gray-300 flex items-center justify-center px-6 py-16">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                
-                {/* Left Text Section */}
-                <div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-emerald-400 mb-6">
-                        About Us
-                    </h1>
-                    <p className="text-lg leading-relaxed mb-6">
-                        We are committed to delivering high-quality services that make a real 
-                        difference. Our team thrives on creativity, innovation, and a deep 
-                        understanding of the needs of our community. Through dedication and 
-                        expertise, we aim to inspire, educate, and empower.
+        <section className="relative dark:bg-black dark:text-gray-300 px-6 py-12">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-3 animate-fadeInUp">
+                    
+                    <h2 className=" text-xl md:text-3xl font-semibold pb-3">
+                        Who We Are
+                    </h2>
+
+                    <p className="text-lg">
+                        <span className="font-semibold italic text-emerald-400">
+                            CTS - Chiller Technical Services LLC
+                        </span>{" "}
+                        is a trusted name in the UAE, engaged in the manufacturing and trading of{" "}
+                        <span className="font-semibold text-emerald-400">
+                            Water Chillers, Cold Rooms, Heat Exchangers, and A/C Units
+                        </span>.
+                        We also provide a wide range of refrigeration equipment, spare parts,
+                        and accessories—delivering reliable cooling solutions tailored to every need.
                     </p>
-                    <p className="text-lg leading-relaxed text-gray-500 dark:text-gray-400">
-                        Our vision is to build a better tomorrow by providing tools and resources 
-                        that help individuals and businesses reach their full potential.  
-                        Together, we create meaningful change.
+
+                    <p className="text-md leading-relaxed text-gray-600 dark:text-gray-400">
+                        With a strong global sourcing network and years of technical expertise,
+                        we ensure our products are <span className="font-semibold text-emerald-400">cost-effective</span>,{" "}
+                        <span className="font-semibold text-emerald-400">energy-efficient</span>, and{" "}
+                        <span className="font-semibold text-emerald-400">built to last</span>.
+                        From chillers to cold rooms and air conditioning units, we take pride
+                        in serving industries with unmatched quality.
                     </p>
                 </div>
 
-                {/* Right Image Section */}
-                <div className="flex justify-center">
-                    <img 
-                        src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&q=80" 
-                        alt="About Us" 
-                        className="rounded-2xl shadow-lg shadow-emerald-500/20 hover:scale-105 transition-transform duration-300"
-                    />
+                <div className="flex justify-center animate-fadeInRight">
+                    <div className="relative group">
+                        <img
+                            src="/about-us-1.jpg"
+                            alt="Refrigeration Equipment"
+                            className="rounded-lg shadow-xl transform group-hover:rotate-1 group-hover:scale-105 transition-transform duration-500"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

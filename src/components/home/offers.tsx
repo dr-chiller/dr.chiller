@@ -1,4 +1,4 @@
-// import { Snowflake } from "lucide-react";
+import { Snowflake } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { FaExchangeAlt, FaTools, FaWarehouse, FaHeadset } from "react-icons/fa";
 
@@ -46,16 +46,26 @@ const HomeOffers = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
+            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300 overflow-hidden"
         >
+            <Snowflake
+                size={140}
+                className="absolute -top-20 left-0 md:top-16 md:left-20 text-emerald-500/10 animate-spin-slow pointer-events-none select-none"
+            />
+            <Snowflake
+                size={140}
+                className="absolute top-56 right-2 md:top-30 md:right-10 text-emerald-500/10 animate-spin-slow pointer-events-none select-none"
+            />
+            <Snowflake
+                size={140}
+                className="absolute bottom-0 z-10 right-4 md:bottom-10 md:right-20 text-emerald-500/10 animate-spin-slow pointer-events-none select-none"
+            />
+
             {/* Heading */}
             <div
                 className={`relative max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ease-out
-                ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} >
-                {/* <Snowflake
-                    size={140}
-                    className="absolute -top-16 md:-top-10 md:-left-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                /> */}
+        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
                 <h2 className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">
                     What We Offer
                 </h2>
@@ -70,31 +80,23 @@ const HomeOffers = () => {
                     comfortable, and satisfied year-round.
                 </p>
             </div>
-                {/* <Snowflake
-                    size={140}
-                    className="absolute top-60 md:top-16 right-2 md:right-10 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                />
-                <Snowflake
-                    size={140}
-                    className="absolute -bottom-20 md:-bottom-20 right-2 md:right-10 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                /> */}
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 {services.map((service, i) => (
                     <div
                         key={i}
-                        className={`group relative flex flex-col p-4 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800 transition-all duration-700 ease-out
-                            hover:scale-105 hover:shadow-2xl
-                            ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-                        `}
+                        className={`group relative flex flex-col p-6 rounded-xl shadow-md bg-gray-50 dark:bg-gray-800 transition-all duration-700 ease-out
+              hover:scale-105 hover:shadow-2xl
+              ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+          `}
                         style={{ transitionDelay: `${i * 150}ms` }}
                     >
                         {/* Left green bar hover effect */}
                         <span className="absolute left-0 top-0 h-0 w-1 bg-yellow-300 transition-all duration-500 group-hover:h-full rounded-tl rounded-bl"></span>
 
                         {/* Icon */}
-                        <div className="text-4xl text-emerald-600 dark:text-emerald-400 mb-4 transition-transform duration-500 group-hover:scale-102">
+                        <div className="text-4xl text-emerald-600 dark:text-emerald-400 mb-4 transition-transform duration-500 group-hover:scale-110">
                             {service.icon}
                         </div>
 

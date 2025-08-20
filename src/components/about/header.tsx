@@ -8,7 +8,7 @@ export default function AboutHeader() {
         <section
             className="relative h-[25vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/contact-us-header.jpg')`,
+                backgroundImage: `url('/about-us-header.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

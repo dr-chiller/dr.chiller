@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaAward, FaUsers, FaCogs, FaClock } from "react-icons/fa";
 import about1 from "/about1.jpeg";
 import about2 from "/about2.jpeg";
+import { Snowflake } from "lucide-react";
 // import { Snowflake } from "lucide-react";
 
 const HomeChoose = () => {
@@ -25,12 +26,22 @@ const HomeChoose = () => {
     return (
         <section
             ref={sectionRef}
-            className="py-16 pb-28 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-950 transition-colors duration-300"
+            className="relative py-16 pb-28 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-950 transition-colors duration-300 overflow-hidden"
         >
+            <Snowflake
+                size={140}
+                className="absolute -top-2 -left-2 md:top-0 md:left-2 text-emerald-500/10 animate-spin-slow pointer-events-none select-none"
+            />
+            <Snowflake
+                size={140}
+                className="absolute -bottom-0 right-0 md:bottom-10 md:right-16 text-emerald-500/10 animate-spin-slow pointer-events-none select-none"
+            />
+
+            {/* Main Content */}
             <div
                 className={`max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center 
-                    transform transition-all duration-1000 ease-out
-                    ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"}`}
+          transform transition-all duration-1000 ease-out
+          ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"}`}
             >
                 {/* Left Side - Images */}
                 <div className="relative flex flex-col items-center lg:block lg:ms-12 sm:mb-12">
@@ -39,28 +50,25 @@ const HomeChoose = () => {
                         src={about1}
                         alt="Our Team"
                         className={`hidden sm:block w-72 h-80 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform sm:rotate-[-3deg]
-                            transition-all duration-1000 ease-out
-                            ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
+              transition-all duration-1000 ease-out
+              ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
                     />
                     <img
                         loading="lazy"
                         src={about2}
                         alt="Work in Action"
                         className={`w-64 h-72 object-cover rounded-xl shadow-lg border-2 border-white dark:border-gray-900 transform sm:rotate-[12deg] 
-                                   sm:absolute sm:top-20 sm:left-70 md:left-100 lg:top-20 lg:left-40
-                                   transition-all duration-1000 delay-200 ease-out
-                                   ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
+                       sm:absolute sm:top-20 sm:left-70 md:left-100 lg:top-20 lg:left-40
+                       transition-all duration-1000 delay-200 ease-out
+                       ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
                     />
-                    {/* <Snowflake
-                        size={140}
-                        className="absolute -top-16 -left-6 md:-top-16 md:-left-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                    /> */}
                 </div>
 
                 {/* Right Side - Text & Reasons */}
                 <div
                     className={`relative transition-all duration-1000 delay-400 ease-out
-                        ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`} >
+            ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
+                >
                     <h2 className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-6">
                         Why Choose Us
                     </h2>
@@ -92,10 +100,7 @@ const HomeChoose = () => {
                             </div>
                         ))}
                     </div>
-                    {/* <Snowflake
-                        size={140}
-                        className="absolute -bottom-22 md:-bottom-22 right-2 md:right-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                    /> */}
+
                     <button className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-md transition-all">
                         About Us
                     </button>
@@ -103,6 +108,7 @@ const HomeChoose = () => {
             </div>
         </section>
     );
+
 };
 
 export default HomeChoose;
