@@ -1,4 +1,4 @@
-import { Snowflake } from "lucide-react";
+// import { Snowflake } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { FaExchangeAlt, FaTools, FaWarehouse, FaHeadset } from "react-icons/fa";
 

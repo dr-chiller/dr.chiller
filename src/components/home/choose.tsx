@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaAward, FaUsers, FaCogs, FaClock } from "react-icons/fa";
 import about1 from "/about1.jpeg";
 import about2 from "/about2.jpeg";
-import { Snowflake } from "lucide-react";
+// import { Snowflake } from "lucide-react";
 
 const HomeChoose = () => {
     const sectionRef = useRef(null);
