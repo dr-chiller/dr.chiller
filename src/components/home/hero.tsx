@@ -129,11 +129,11 @@ const HomeHero = () => {
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="w-full md:w-7/10 h-full flex flex-col p-6 md:p-12 text-white"
+                    className="w-full md:w-7/10 flex flex-col m-auto gap-16 justify-between p-6 md:p-12 text-white"
                 >
                     {/* Brand Block */}
-                    <div className="flex items-center gap-3 mb-8 mt-40 md:mt-24">
-                        <img src="/logo.png" alt="Dr.Chiller Logo" className="w-12 h-12" />
+                    <div className="flex items-center gap-3 mt-16">
+                        <img src="/hero1.jpg" alt="Dr.Chiller Logo" className="w-12 h-12 rounded-3xl" />
                         <div>
                             <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
                             <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase tracking-wide">
@@ -142,10 +142,9 @@ const HomeHero = () => {
                         </div>
                     </div>
 
-
                     {/* Slide Content */}
                     <div>
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 mt-30 md:mt-20 font-bold mb-4 font-[Montserrat]">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 mt-16 font-bold mb-4 font-[Montserrat]">
                             {slides[currentIndex].header}
                         </h1>
 
@@ -161,6 +160,7 @@ const HomeHero = () => {
                         </Link>
                     </div>
                 </motion.div>
+
 
                 {/* Desktop Preview List */}
                 <motion.div

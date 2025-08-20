@@ -37,11 +37,11 @@ const CoilManufacturingHero = () => {
                         </div>
 
                         {/* Second stepped image */}
-                        <div className="absolute -left-45 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
+                        <div className="absolute -left-37 sm:-left-50 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img
                                 src={coil_2}
                                 alt="Coil Replacement"
-                                className="w-40 h-72 object-cover"
+                                className="w-35 sm:w-40 h-72 object-cover"
                             />
                         </div>
                     </div>

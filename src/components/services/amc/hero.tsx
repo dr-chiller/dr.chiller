@@ -37,11 +37,11 @@ const AMCHero = () => {
                         </div>
 
                         {/* Second (staggered) */}
-                        <div className="absolute -left-45 sm:-left-50 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
+                        <div className="absolute -left-37 sm:-left-50 sm:-left-50 top-20 overflow-hidden rounded-xl shadow-xl transform hover:scale-105 transition duration-500">
                             <img
                                 src={amc_2}
                                 alt="Preventive Maintenance"
-                                className="w-40 h-72 object-cover"
+                                className="w-35 sm:w-40 h-72 object-cover"
                             />
                         </div>
                     </div>
