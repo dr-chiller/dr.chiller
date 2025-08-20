@@ -51,10 +51,10 @@ const HomeChoose = () => {
                                    transition-all duration-1000 delay-200 ease-out
                                    ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
                     />
-                    <Snowflake
+                    {/* <Snowflake
                         size={140}
                         className="absolute -top-16 -left-6 md:-top-16 md:-left-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                    />
+                    /> */}
                 </div>
 
                 {/* Right Side - Text & Reasons */}
@@ -92,10 +92,10 @@ const HomeChoose = () => {
                             </div>
                         ))}
                     </div>
-                    <Snowflake
+                    {/* <Snowflake
                         size={140}
                         className="absolute -bottom-22 md:-bottom-22 right-2 md:right-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                    />
+                    /> */}
                     <button className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-md transition-all">
                         About Us
                     </button>

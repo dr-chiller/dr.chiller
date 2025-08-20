@@ -52,10 +52,10 @@ const HomeOffers = () => {
             <div
                 className={`relative max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ease-out
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} >
-                <Snowflake
+                {/* <Snowflake
                     size={140}
                     className="absolute -top-16 md:-top-10 md:-left-16 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                />
+                /> */}
                 <h2 className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400">
                     What We Offer
                 </h2>
@@ -70,14 +70,14 @@ const HomeOffers = () => {
                     comfortable, and satisfied year-round.
                 </p>
             </div>
-                <Snowflake
+                {/* <Snowflake
                     size={140}
                     className="absolute top-60 md:top-16 right-2 md:right-10 text-emerald-500/10 animate-spin-slow pointer-events-none"
                 />
                 <Snowflake
                     size={140}
                     className="absolute -bottom-20 md:-bottom-20 right-2 md:right-10 text-emerald-500/10 animate-spin-slow pointer-events-none"
-                />
+                /> */}
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

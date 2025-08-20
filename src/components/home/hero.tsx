@@ -103,7 +103,7 @@ const HomeHero = () => {
                 {slides.map((slide, index) => (
                     <div
                         key={index}
-                        className={`absolute inset-0 w-screen h-screen transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+                        className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
                         style={{
                             backgroundImage: `url(${slide.image})`,
                             backgroundSize: "cover",
@@ -120,22 +120,26 @@ const HomeHero = () => {
             {/* Content */}
             <div className="relative z-10 flex flex-col md:flex-row w-full h-full">
                 {/* Slide content */}
-                <div className="w-full md:w-7/10 flex flex-col justify-between p-6 md:p-12 text-white">
-                    <div className="flex items-center gap-3">
+                <div className="relative z-10 flex flex-col md:w-7/10 h-full text-white p-6 md:p-12">
+                    {/* Brand block in middle */}
+                    <div className="flex-1 flex items-center gap-3">
                         <img src="/logo.png" className="w-12 h-12 rounded-3xl" alt="Dr.Chiller Logo" />
                         <div>
                             <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
-                            <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase tracking-wide">
+                            <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase">
                                 Skill to Chill
                             </span>
                         </div>
                     </div>
 
-                    <div>
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-4">
+                    {/* Slide content pinned to bottom */}
+                    <div className="pb-10">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-3">
                             {slides[currentIndex].header}
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl mb-6 max-w-2xl">{slides[currentIndex].description}</p>
+                        <p className="text-base sm:text-lg md:text-xl mb-6 max-w-2xl">
+                            {slides[currentIndex].description}
+                        </p>
                         <Link
                             to={slides[currentIndex].button}
                             className="inline-block px-4 py-2 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
@@ -147,7 +151,7 @@ const HomeHero = () => {
 
                 {/* Desktop list */}
                 <motion.div
-                    className="hidden md:flex w-3/10 h-full flex-col justify-center space-y-3 p-4"
+                    className="hidden md:flex md:w-3/10 h-full flex-col justify-end space-y-3 p-4"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
