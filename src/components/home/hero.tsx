@@ -132,7 +132,7 @@ const HomeHero = () => {
                     className="w-full md:w-7/10 h-full flex flex-col p-6 md:p-12 text-white"
                 >
                     {/* Brand Block */}
-                    <div className="flex items-center gap-3 mb-8 mt-20 md:mt-24">
+                    <div className="flex items-center gap-3 mb-8 mt-40 md:mt-24">
                         <img src="/logo.png" alt="Dr.Chiller Logo" className="w-12 h-12" />
                         <div>
                             <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
@@ -143,11 +143,11 @@ const HomeHero = () => {
                     </div>
 
                     {/* Spacer to push the slide content down */}
-                    <div className="flex-1"></div>
+                    <div className="md:flex-1"></div>
 
                     {/* Slide Content */}
                     <div>
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-4 font-[Montserrat]">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 mt-30 md:mt-0 font-bold mb-4 font-[Montserrat]">
                             {slides[currentIndex].header}
                         </h1>
 
