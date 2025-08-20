@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const slides = [
@@ -74,110 +74,94 @@ const slides = [
         image: "/hero10.jpg",
     },
 ];
-
 const HomeHero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Preload all images once
     useEffect(() => {
-        slides.forEach(slide => {
+        slides.forEach((slide) => {
             const img = new Image();
             img.src = slide.image;
         });
     }, []);
 
-    // Auto slide every 5 seconds
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
+            setCurrentIndex((prev) => (prev + 1) % slides.length);
         }, 5000);
         return () => clearInterval(timer);
     }, []);
 
     return (
         <motion.div
-            className="relative h-screen overflow-hidden"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1 }}
+            className="relative h-screen overflow-x-hidden overflow-y-hidden"
         >
-            {/* Background crossfade layer */}
-            <div className="absolute inset-0">
+            {/* Background crossfade */}
+            <div className="absolute inset-0 w-screen h-screen">
                 {slides.map((slide, index) => (
                     <div
                         key={index}
-                        className={`absolute inset-0 transition-opacity duration-700 ease-in-out 
-            ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                        className={`absolute inset-0 w-screen h-screen transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
                         style={{
                             backgroundImage: `url(${slide.image})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat'
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
                         }}
                     />
                 ))}
             </div>
 
-            {/* Overlay for darkening */}
-            <div className="absolute inset-0 bg-black/50 z-0" />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/50 z-0"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col md:flex-row items-center w-full h-full md:pt-10">
-                {/* Main Slide Content */}
-                <div className="w-full md:w-7/10 flex flex-col justify-between md:justify-around p-6 md:p-12 text-white">
-                    {/* Logo / Brand */}
-                    {/* <div className="flex items-center gap-3 pt-30 md:pt-10">
-                        <img
-                            src="/logo.png"
-                            alt="Dr.Chiller Logo"
-                            className="w-12 h-12 rounded-3xl"
-                        />
+            <div className="relative z-10 flex flex-col md:flex-row w-full h-full">
+                {/* Slide content */}
+                <div className="w-full md:w-7/10 flex flex-col justify-between p-6 md:p-12 text-white">
+                    <div className="flex items-center gap-3">
+                        <img src="/logo.png" className="w-12 h-12 rounded-3xl" alt="Dr.Chiller Logo" />
                         <div>
                             <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
                             <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase tracking-wide">
                                 Skill to Chill
                             </span>
                         </div>
-                    </div> */}
+                    </div>
 
-                    {/* Slide-info */}
-                    <div className="pt-40 md:pt-0">
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-4 font-[Montserrat]">
+                    <div>
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl text-emerald-500 font-bold mb-4">
                             {slides[currentIndex].header}
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl mb-6 font-[Montserrat] max-w-2xl">
-                            {slides[currentIndex].description}
-                        </p>
+                        <p className="text-base sm:text-lg md:text-xl mb-6 max-w-2xl">{slides[currentIndex].description}</p>
                         <Link
                             to={slides[currentIndex].button}
-                            className="px-3 py-2 md:px-6 md:py-3 bg-emerald-500 text-black font-semibold rounded-lg shadow hover:bg-emerald-700 transition"
+                            className="inline-block px-4 py-2 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
                         >
                             Explore
                         </Link>
                     </div>
                 </div>
 
-
-
-
-
-                {/* Desktop Preview List */}
+                {/* Desktop list */}
                 <motion.div
                     className="hidden md:flex w-3/10 h-full flex-col justify-center space-y-3 p-4"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    <div className="backdrop-blur bg-transparent rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
+                    <div className="backdrop-blur rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
                         {slides.map((slide, index) => (
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 font-[Montserrat] shadow-md mb-2 
-                ${index === currentIndex
-                                        ? 'bg-emerald-500 text-white'
-                                        : 'bg-white dark:bg-gray-900 dark:text-gray-100 text-gray-800'}
-                hover:scale-105`}
+                                className={`w-full text-left px-4 py-2 rounded-md mb-2 shadow transition
+                  ${index === currentIndex
+                                        ? "bg-emerald-500 text-white"
+                                        : "bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200"}
+                  hover:scale-105`}
                             >
                                 {slide.header}
                             </button>
@@ -185,29 +169,29 @@ const HomeHero = () => {
                     </div>
                 </motion.div>
 
-                {/* Mobile Buttons */}
+                {/* Mobile buttons */}
                 <motion.div
-                    className="absolute bottom-2 md:hidden w-full px-4 flex gap-2 overflow-x-auto no-scrollbar"
+                    className="md:hidden absolute bottom-3 w-full px-4 flex gap-2 overflow-x-auto no-scrollbar"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
                 >
                     {slides.map((slide, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`flex-shrink-0 px-4 py-2 rounded-full font-[Montserrat] text-sm transition-all 
-              ${index === currentIndex
-                                    ? 'bg-emerald-500 text-white'
-                                    : 'bg-white dark:bg-gray-900 text-black dark:text-white'}
-              hover:bg-emerald-600 hover:text-white`}
+                            className={`flex-shrink-0 px-4 py-2 rounded-full text-sm transition
+                ${index === currentIndex
+                                    ? "bg-emerald-500 text-white"
+                                    : "bg-white dark:bg-gray-900 text-black dark:text-white"}
+                hover:bg-emerald-600 hover:text-white`}
                         >
                             {slide.header}
                         </button>
                     ))}
                 </motion.div>
-            </div >
-        </motion.div >
+            </div>
+        </motion.div>
     );
 };
 
