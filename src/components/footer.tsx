@@ -124,7 +124,19 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="border-t border-gray-300 dark:border-gray-800 py-4 mx-4 text-center text-xs text-gray-500 dark:text-gray-400">
-                © {new Date().getFullYear()} Dr.Chiller. All rights reserved.
+                © {new Date().getFullYear()} CTS. All rights reserved.
+                <br />
+                <span className="text-gray-400 text-[0.7rem]">
+                    Developed by{" "}
+                    <a
+                        href="https://melbinmathew.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-emerald-700 dark:text-emerald-400 hover:text-emerald-500 dark:hover:text-emerald-500"
+                    >
+                        Melbin Mathew
+                    </a>
+                </span>
             </div>
         </footer>
     );

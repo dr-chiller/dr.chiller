@@ -25,10 +25,34 @@ const Navbar = () => {
     const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+    useEffect(() => {
+        const storedTheme = localStorage.getItem("themeData");
+        const themeData = storedTheme ? JSON.parse(storedTheme) : null;
+
+        if (themeData) {
+            const now = new Date().getTime();
+            const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+            if (now - themeData.timestamp < sevenDays) {
+                setIsDark(themeData.isDark);
+                if (themeData.isDark) document.documentElement.classList.add("dark");
+            }
+        }
+    }, []);
+
     const toggleDark = () => {
-        setIsDark(!isDark);
-        document.documentElement.classList.toggle("dark");
-    };
+        setIsDark(prev => {
+            const newMode = !prev;
+            if (newMode) document.documentElement.classList.add("dark");
+            else document.documentElement.classList.remove("dark");
+
+            localStorage.setItem(
+                "themeData",
+                JSON.stringify({ isDark: newMode, timestamp: new Date().getTime() })
+            );
+            return newMode;
+        });
+    }
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -79,7 +103,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="flex items-center space-x-2 flex-shrink-0 dark:text-emerald-400 text-emerald-600">
+                    <div className="flex items-center space-x-2 flex-shrink-0 dark:text-emerald-400 text-emerald-500">
                         <img
                             src="/logo-single.png"
                             alt="Logo"
