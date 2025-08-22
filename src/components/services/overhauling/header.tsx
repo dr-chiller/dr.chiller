@@ -8,7 +8,7 @@ export default function OverhaulingHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/overhauling-header.jpg')`,
+                backgroundImage: `url('/overhauling-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

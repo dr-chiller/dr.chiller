@@ -8,7 +8,7 @@ export default function MaintenanceHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/maintenance-header.jpg')`,
+                backgroundImage: `url('/maintenance-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

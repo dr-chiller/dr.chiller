@@ -8,7 +8,7 @@ export default function ServicesHeader() {
         <section
             className="relative h-[25vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/ac-units-header.jpg')`,
+                backgroundImage: `url('/ac-units-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundAttachment: "fixed",

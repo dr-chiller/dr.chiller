@@ -8,7 +8,7 @@ export default function ChilledWaterPipelineHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/chilled-water-pipeline-header.jpg')`,
+                backgroundImage: `url('/chilled-water-pipeline-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundAttachment: "fixed",

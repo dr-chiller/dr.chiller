@@ -6,7 +6,7 @@ const HomeRentals = () => {
                 {/* Image */}
                 <div className="relative w-full h-64 sm:h-80 md:h-full overflow-hidden rounded-2xl shadow-lg">
                     <img
-                        src="/rental1.jpeg"
+                        src="/rental1.webp"
                         alt="AC, Water Chiller & Genset Rentals"
                         className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
                     />

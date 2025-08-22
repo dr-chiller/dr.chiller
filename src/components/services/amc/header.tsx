@@ -8,7 +8,7 @@ export default function AMCHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/amc-header.jpg')`,
+                backgroundImage: `url('/amc-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

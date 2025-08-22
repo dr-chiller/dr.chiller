@@ -10,7 +10,7 @@ import amcImg from "../../../assets/images/services/amc-contract.webp";
 export default function ServicesList() {
     const services = [
         {
-            name: "Rentals",
+            name: "A/C, Chiller & Genset Rentals",
             description: "Short and long-term rental solutions for ACs, chillers and diesel gensets.",
             image: rentalImg,
             link: "/services/rentals",

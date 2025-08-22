@@ -72,7 +72,7 @@ const HomeOffers = () => {
                 <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                     At{" "}
                     <span className="font-semibold text-emerald-700 dark:text-emerald-300">
-                        Dr.Chiller
+                        CTS - Chiller Technical Services L.L.C
                     </span>
                     , we provide top-notch solutions for all your cooling needs. From
                     premium trading options to expert maintenance, flexible rentals, and

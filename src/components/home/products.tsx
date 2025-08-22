@@ -8,26 +8,26 @@ import ac from "../../assets/images/products/ac-units-2.webp";
 
 const products = [
     {
-        name: "Water Chillers",
+        name: "Water Chillers, Coolers & Heat Pumps",
         description: "High-performance chillers for all your cooling needs.",
         image: wc,
         link: "/products/water-chillers",
     },
     {
-        name: "Cold Rooms",
+        name: "Cold Rooms & Ice Block Machines",
         description: "Energy-efficient cold storage rooms for perishable goods.",
         image: cr,
         link: "/products/cold-rooms",
     },
     {
-        name: "Heat Exchangers",
+        name: "Heat Exchangers & Cooling Towers",
         description:
             "Reliable heat exchangers to optimize energy transfer processes.",
         image: he,
         link: "/products/heat-exchangers",
     },
     {
-        name: "A/C Units",
+        name: "A/C Units & Air Curtains",
         description:
             "Efficient air conditioning systems designed for comfort and reliability.",
         image: ac,
@@ -102,8 +102,10 @@ const HomeProducts = () => {
                                 <Link
                                     to={product.link}
                                     className="inline-block bg-emerald-500 text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-emerald-600 transition"
+                                    aria-label={`View more about ${product.name}`}
                                 >
                                     View More
+                                    <span className="sr-only"> about {product.name}</span>
                                 </Link>
                             </div>
                         </div>

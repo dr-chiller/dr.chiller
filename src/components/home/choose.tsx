@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { FaAward, FaUsers, FaCogs, FaClock } from "react-icons/fa";
-import about1 from "/about1.jpeg";
-import about2 from "/about2.jpeg";
+import about1 from "/about1.webp";
+import about2 from "/about2.webp";
 import { Snowflake } from "lucide-react";
-// import { Snowflake } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HomeChoose = () => {
     const sectionRef = useRef(null);
@@ -101,9 +101,14 @@ const HomeChoose = () => {
                         ))}
                     </div>
 
-                    <button className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-md transition-all">
-                        About Us
-                    </button>
+                    <Link
+                        to="/about-us"
+                        className="inline-block bg-emerald-500 text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-emerald-600 transition"
+                        aria-label={`Learn more about us`}
+                    >
+                        Learn More
+                        <span className="sr-only"> about us</span>
+                    </Link>
                 </div>
             </div>
         </section>

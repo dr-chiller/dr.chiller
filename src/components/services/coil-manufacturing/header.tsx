@@ -8,7 +8,7 @@ export default function CoilManufacturingHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/coil-header.jpg')`,
+                backgroundImage: `url('/coil-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundAttachment: "fixed",

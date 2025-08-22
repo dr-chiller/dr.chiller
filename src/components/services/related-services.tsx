@@ -9,7 +9,7 @@ import amcImg from "../../assets/images/services/amc-contract.webp";
 
 const allServices = [
     {
-        name: "Rentals",
+        name: "A/C, Chiller & Genset Rentals",
         image: rentalImg,
         link: "/services/rentals",
     },

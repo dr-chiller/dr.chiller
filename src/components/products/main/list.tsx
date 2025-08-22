@@ -8,25 +8,25 @@ import ac from "../../../assets/images/products/ac-units-2.webp";
 export default function ProductsList() {
     const products = [
         {
-            name: "Water Chillers",
+            name: "Water Chillers, Coolers & Heat Pumps",
             description: "High-performance chillers for all industrial and commercial cooling needs.",
             image: wc,
             link: "/products/water-chillers",
         },
         {
-            name: "Cold Rooms",
+            name: "Cold Rooms & Ice Block Machines",
             description: "Energy-efficient cold storage rooms for fresh and frozen products.",
             image: cr,
             link: "/products/cold-rooms",
         },
         {
-            name: "Heat Exchangers",
+            name: "Heat Exchangers & Cooling Towers",
             description: "Reliable heat exchangers for efficient thermal energy transfer.",
             image: he,
             link: "/products/heat-exchangers",
         },
         {
-            name: "A/C Units",
+            name: "A/C Units & Air Curtains",
             description: "Efficient air conditioning systems for residential and industrial applications.",
             image: ac,
             link: "/products/ac-units",

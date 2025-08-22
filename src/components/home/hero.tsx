@@ -4,28 +4,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
     {
-        header: "Water Chillers",
+        header: "Water Chillers, Coolers & Heat Pumps",
         description:
             "High-efficiency water chillers designed for reliable cooling of industrial and commercial applications.",
         button: "/products/water-chillers",
         image: "/hero1.jpg",
     },
     {
-        header: "Cold Rooms",
+        header: "Cold Rooms & Ice Block Machines",
         description:
             "Custom-built cold rooms and walk-in freezers for food, pharmaceuticals and logistics industries.",
         button: "/products/cold-rooms",
         image: "/hero2.jpg",
     },
     {
-        header: "Heat Exchangers",
+        header: "Heat Exchangers & Cooling Towers",
         description:
             "High-performance heat exchangers for efficient thermal transfer in HVAC and process systems.",
         button: "/products/heat-exchangers",
         image: "/hero4.jpg",
     },
     {
-        header: "A/C Units",
+        header: "A/C Units & Air Curtains",
         description:
             "Robust air conditioning systems for residential, commercial and industrial environments.",
         button: "/products/ac-units",

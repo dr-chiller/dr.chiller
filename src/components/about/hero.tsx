@@ -34,7 +34,7 @@ export default function AboutHero() {
                 <div className="flex justify-center animate-fadeInRight">
                     <div className="relative group">
                         <img
-                            src="/about-us-1.jpg"
+                            src="/about-us-1.webp"
                             alt="Refrigeration Equipment"
                             className="rounded-lg shadow-xl transform group-hover:rotate-1 group-hover:scale-105 transition-transform duration-500"
                         />

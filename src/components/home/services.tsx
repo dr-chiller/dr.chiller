@@ -12,7 +12,7 @@ import amcImg from "../../assets/images/services/amc-contract.webp";
 
 const services = [
     {
-        name: "Rentals",
+        name: "A/C, Chiller & Genset Rentals",
         description: "Short and long-term rental solutions for ACs, chillers and diesel gensets.",
         image: rentalImg,
         link: "/services/rentals",
@@ -122,9 +122,11 @@ const HomeServices = () => {
                                     </div>
                                     <Link
                                         to={service.link}
-                                        className="inline-block bg-emerald-500 text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-emerald-600 transition"
+                                        className="inline-block bg-emerald-500 text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-emerald-600 transition relative"
+                                        aria-label={`Learn more about ${service.name}`}
                                     >
                                         Learn More
+                                        <span className="sr-only"> about {service.name}</span>
                                     </Link>
                                 </div>
                             </div>

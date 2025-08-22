@@ -140,14 +140,14 @@ const Navbar = () => {
                                 : ""
                                 }`}>Products</button>
                             {showDropdownP && (
-                                <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-64">
+                                <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-md z-20 w-84">
                                     <ul className="py-2">
                                         {[
                                             { label: "All Products", path: "/products" },
-                                            { label: "Water Chillers", path: "/products/water-chillers" },
-                                            { label: "Cold Rooms", path: "/products/cold-rooms" },
-                                            { label: "Heat Exchangers", path: "/products/heat-exchangers" },
-                                            { label: "A/C Units", path: "/products/ac-units" },
+                                            { label: "Water Chillers, Coolers & Heat Pumps", path: "/products/water-chillers" },
+                                            { label: "Cold Rooms & Ice Block Machines", path: "/products/cold-rooms" },
+                                            { label: "Heat Exchangers & Cooling Towers", path: "/products/heat-exchangers" },
+                                            { label: "A/C Units & Air Curtains", path: "/products/ac-units" },
                                         ].map((item, index) => (
                                             <li key={index}>
                                                 <Link
@@ -179,7 +179,7 @@ const Navbar = () => {
                                     <ul className="py-2">
                                         {[
                                             { label: "All Services", path: "/services" },
-                                            { label: "Rentals", path: "/services/rentals" },
+                                            { label: "A/C, Chiller & Genset Rentals", path: "/services/rentals" },
                                             {
                                                 label: "Chilled Water Pipeline & Flushing",
                                                 path: "/services/pipeline",
@@ -287,10 +287,10 @@ const Navbar = () => {
                             <ul className="ml-4 mt-2 space-y-2">
                                 {[
                                     { label: "All Products", path: "/products" },
-                                    { label: "Water Chillers", path: "/products/water-chillers" },
-                                    { label: "Cold Rooms", path: "/products/cold-rooms" },
-                                    { label: "Heat Exchangers", path: "/products/heat-exchangers" },
-                                    { label: "A/C Units", path: "/products/ac-units" },
+                                    { label: "Water Chillers, Coolers & Heat Pumps", path: "/products/water-chillers" },
+                                    { label: "Cold Rooms & Ice Block Machines", path: "/products/cold-rooms" },
+                                    { label: "Heat Exchangers & Cooling Towers", path: "/products/heat-exchangers" },
+                                    { label: "A/C Units & Air Curtains", path: "/products/ac-units" },
                                 ].map((item, index) => (
                                     <li key={index}>
                                         <Link
@@ -328,7 +328,7 @@ const Navbar = () => {
                             <ul className="ml-4 mt-2 space-y-2">
                                 {[
                                     { label: "All Services", path: "/services" },
-                                    { label: "Rentals", path: "/services/rentals" },
+                                    { label: "A/C, Chiller & Genset Rentals", path: "/services/rentals" },
                                     {
                                         label: "Chilled Water Pipeline & Flushing",
                                         path: "/services/pipeline",

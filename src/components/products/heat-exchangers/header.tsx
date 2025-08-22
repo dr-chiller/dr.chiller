@@ -8,7 +8,7 @@ export default function HeatExchangersHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/heat-exchangers-header.jpg')`,
+                backgroundImage: `url('/heat-exchangers-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

@@ -8,7 +8,7 @@ export default function RentalsHeader() {
         <section
             className="relative h-[40vh] flex items-center justify-center text-center text-white"
             style={{
-                backgroundImage: `url('/rental-header.jpg')`,
+                backgroundImage: `url('/rental-header.webp')`,
                 backgroundSize: "cover",
                 backgroundPosition: "bottom",
                 backgroundAttachment: "fixed",

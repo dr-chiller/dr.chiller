@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="relative bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.6fr_1.3fr_1.6fr] gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.7fr_1.3fr_1.3fr_1.6fr] gap-8">
                 {/* Brand & Description */}
                 <div>
                     <div className="flex items-center space-x-1">
@@ -35,10 +35,10 @@ const Footer = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                         {[
-                            { name: "Water Chillers", link: "/products/water-chillers" },
-                            { name: "Cold Rooms", link: "/products/cold-rooms" },
-                            { name: "Heat Exchangers", link: "/products/heat-exchangers" },
-                            { name: "A/C Units", link: "/products/ac-units" },
+                            { name: "Water Chillers, Coolers & Heat Pumps", link: "/products/water-chillers" },
+                            { name: "Cold Rooms & Ice Block Machines", link: "/products/cold-rooms" },
+                            { name: "Heat Exchangers & Cooling Towers", link: "/products/heat-exchangers" },
+                            { name: "A/C Units & Air Curtains", link: "/products/ac-units" },
                         ].map((item, i) => (
                             <li key={i}>
                                 <Link
@@ -60,7 +60,7 @@ const Footer = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                         {[
-                            { name: "Rentals", link: "/services/rentals" },
+                            { name: "A/C, Chiller & Genset Rentals", link: "/services/rentals" },
                             { name: "Chilled Water Pipeline & Flushing", link: "/services/pipeline" },
                             { name: "A/C, Chiller & Coldroom Maintenance", link: "/services/maintenance" },
                             { name: "Coil Manufacturig & Replacements", link: "/services/coil" },
