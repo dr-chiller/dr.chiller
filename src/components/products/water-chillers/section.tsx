@@ -1,12 +1,12 @@
 import { Snowflake, Droplets, Wrench, Gauge, AirVent } from "lucide-react";
 import { MdEco } from "react-icons/md";
 
-import wc1 from "../../../assets/images/products/air-cooled-industrial-water-chiller.jpg";
-import wc2 from "../../../assets/images/products/air-cooled-domestic-water-chiller.jpg";
+import wc1 from "../../../assets/images/products/air-cooled-industrial-water-chiller.webp";
+import wc2 from "../../../assets/images/products/air-cooled-domestic-water-chiller.webp";
 import wc3 from "../../../assets/images/products/water-cooled-industrial-water-chiller.webp";
-import wc4 from "../../../assets/images/products/water-chiller-custom-made.png";
-import wc5 from "../../../assets/images/products/water-chiller-price-range.png";
-import wc6 from "../../../assets/images/products/water-chiller-capacity-range.jpg";
+import wc4 from "../../../assets/images/products/water-chiller-custom-made.webp";
+import wc5 from "../../../assets/images/products/water-chiller-price-range.webp";
+import wc6 from "../../../assets/images/products/water-chiller-capacity-range.webp";
 
 const products = [
     {

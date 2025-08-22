@@ -1,5 +1,5 @@
-import cold_rooms_1 from "../../../assets/images/products/cold-rooms-1.jpg";
-import cold_rooms_2 from "../../../assets/images/products/cold-rooms-2.jpg";
+import cold_rooms_1 from "../../../assets/images/products/cold-rooms-1.webp";
+import cold_rooms_2 from "../../../assets/images/products/cold-rooms-2.webp";
 const ColdRoomsHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

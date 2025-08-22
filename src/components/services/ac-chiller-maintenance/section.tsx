@@ -1,11 +1,11 @@
 import { Wrench, RefreshCcw, ShieldCheck, Cog, Droplets, Zap } from "lucide-react";
 
-import maintenance_installation from "../../../assets/images/services/maintenance-installation.jpg";
-import maintenance_spare_replacement from "../../../assets/images/services/maintenance-replacement.jpg";
-import maintenance_coil from "../../../assets/images/services/maintenance-condenser-coil.jpg";
-import maintenance_duct_cleaning from "../../../assets/images/services/maintenance-duct-cleaning.jpeg";
-import maintenance_panel_rewiring from "../../../assets/images/services/maintenance-electric-panel.jpg";
-import maintenance_water_service from "../../../assets/images/services/maintenance-water-service.jpg";
+import maintenance_installation from "../../../assets/images/services/maintenance-installation.webp";
+import maintenance_spare_replacement from "../../../assets/images/services/maintenance-replacement.webp";
+import maintenance_coil from "../../../assets/images/services/maintenance-condenser-coil.webp";
+import maintenance_duct_cleaning from "../../../assets/images/services/maintenance-duct-cleaning.webp";
+import maintenance_panel_rewiring from "../../../assets/images/services/maintenance-electric-panel.webp";
+import maintenance_water_service from "../../../assets/images/services/maintenance-water-service.webp";
 
 const maintenanceServices = [
     {

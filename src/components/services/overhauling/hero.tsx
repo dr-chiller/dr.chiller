@@ -1,5 +1,5 @@
-import overhaul_1 from "../../../assets/images/services/overhauling-1.jpg";
-import overhaul_2 from "../../../assets/images/services/overhauling-2.jpg";
+import overhaul_1 from "../../../assets/images/services/overhauling-1.webp";
+import overhaul_2 from "../../../assets/images/services/overhauling-2.webp";
 
 const OverhaulingHero = () => {
     return (

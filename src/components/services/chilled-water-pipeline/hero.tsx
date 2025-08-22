@@ -1,5 +1,5 @@
-import pipeline_1 from "../../../assets/images/services/pipeline-1.jpg";
-import pipeline_2 from "../../../assets/images/services/pipeline-2.jpg";
+import pipeline_1 from "../../../assets/images/services/pipeline-1.webp";
+import pipeline_2 from "../../../assets/images/services/pipeline-2.webp";
 
 const ChilledWaterPipelineHero = () => {
     return (

@@ -1,11 +1,11 @@
 import { Snowflake, Package, Thermometer, Wrench, Gauge, Settings } from "lucide-react";
 
-import cr1 from "../../../assets/images/products/chiller-rooms.jpeg";
-import cr2 from "../../../assets/images/products/freezer-rooms.jpg";
-import cr3 from "../../../assets/images/products/blast-freezers.png";
-import cr4 from "../../../assets/images/products/condensers.jpg";
-import cr5 from "../../../assets/images/products/cold-rooms-range.jpg";
-import cr6 from "../../../assets/images/products/cold-rooms-temperature.jpg";
+import cr1 from "../../../assets/images/products/chiller-rooms.webp";
+import cr2 from "../../../assets/images/products/freezer-rooms.webp";
+import cr3 from "../../../assets/images/products/blast-freezers.webp";
+import cr4 from "../../../assets/images/products/condensers.webp";
+import cr5 from "../../../assets/images/products/cold-rooms-range.webp";
+import cr6 from "../../../assets/images/products/cold-rooms-temperature.webp";
 
 const coldRoomProducts = [
     {

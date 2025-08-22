@@ -1,4 +1,4 @@
-import heat_exchangers_1 from "../../../assets/images/products/heat-exchangers-1.jpg";
+import heat_exchangers_1 from "../../../assets/images/products/heat-exchangers-1.webp";
 import heat_exchangers_2 from "../../../assets/images/products/heat-exchangers-2.webp";
 const HeatExchangersHero = () => {
     return (

@@ -1,11 +1,11 @@
 import { Layers3, Wrench, Settings, Repeat2, Thermometer } from "lucide-react";
 
-import he1 from '../../../assets/images/products/shell-and-tube-heat-exchangers.jpg';
-import he2 from '../../../assets/images/products/titanium-heat-exchangers.jpg';
-import he3 from '../../../assets/images/products/retubing-heat-exchangers.jpg';
-import he4 from '../../../assets/images/products/plate-heat-exchangers.jpeg';
-import he5 from '../../../assets/images/products/plate-heat-exchangers-spare-parts.jpg';
-import he6 from '../../../assets/images/products/heat-exchangers-custom-made.jpg';
+import he1 from '../../../assets/images/products/shell-and-tube-heat-exchangers.webp';
+import he2 from '../../../assets/images/products/titanium-heat-exchangers.webp';
+import he3 from '../../../assets/images/products/retubing-heat-exchangers.webp';
+import he4 from '../../../assets/images/products/plate-heat-exchangers.webp';
+import he5 from '../../../assets/images/products/plate-heat-exchangers-spare-parts.webp';
+import he6 from '../../../assets/images/products/heat-exchangers-custom-made.webp';
 
 const heatExchangerProducts = [
     {

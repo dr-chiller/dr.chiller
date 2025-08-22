@@ -1,9 +1,9 @@
 import { Airplay, Snowflake, Fuel } from "lucide-react";
 
 // example images – replace with your own
-import ac_rental from "../../../assets/images/services/rental-ac.jpg";
-import chiller_rental from "../../../assets/images/services/rental-chiller.jpg";
-import genset_rental from "../../../assets/images/services/rental-genset.jpg";
+import ac_rental from "../../../assets/images/services/rental-ac.webp";
+import chiller_rental from "../../../assets/images/services/rental-chiller.webp";
+import genset_rental from "../../../assets/images/services/rental-genset.webp";
 
 const rentalServices = [
     {

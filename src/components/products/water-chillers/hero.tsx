@@ -1,5 +1,5 @@
-import water_chillers_1 from "../../../assets/images/products/water-chiller-1.jpg";
-import water_chillers_2 from "../../../assets/images/products/water-chiller-2.jpg";
+import water_chillers_1 from "../../../assets/images/products/water-chiller-1.webp";
+import water_chillers_2 from "../../../assets/images/products/water-chiller-2.webp";
 
 const WaterChillersHero = () => {
     return (

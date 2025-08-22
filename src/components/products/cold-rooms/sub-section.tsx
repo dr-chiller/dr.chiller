@@ -1,4 +1,4 @@
-import ice_black_machine from "../../../assets/images/products/ice-block-machine.jpg";
+import ice_black_machine from "../../../assets/images/products/ice-block-machine.webp";
 
 const ColdRoomsSubSection = () => {
     return (

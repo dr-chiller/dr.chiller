@@ -1,5 +1,5 @@
-import maintenance_1 from "../../../assets/images/services/maintenance-1.jpg";
-import maintenance_2 from "../../../assets/images/services/maintenance-2.jpg";
+import maintenance_1 from "../../../assets/images/services/maintenance-1.webp";
+import maintenance_2 from "../../../assets/images/services/maintenance-2.webp";
 
 const MaintenanceHero = () => {
     return (

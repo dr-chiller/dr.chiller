@@ -1,5 +1,5 @@
-import ac_units_1 from "../../../assets/images/products/ac-units-1.jpg";
-import ac_units_2 from "../../../assets/images/products/ac-units-2.jpg";
+import ac_units_1 from "../../../assets/images/products/ac-units-1.webp";
+import ac_units_2 from "../../../assets/images/products/ac-units-2.webp";
 const ACUnitsHero = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

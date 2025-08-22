@@ -11,7 +11,7 @@ export default function AboutHero() {
 
                     <p className="text-lg">
                         <span className="font-semibold italic text-emerald-400">
-                            CTS - Chiller Technical Services LLC
+                            CTS - Chiller Technical Services L.L.C
                         </span>{" "}
                         is a trusted name in the UAE, engaged in the manufacturing and trading of{" "}
                         <span className="font-semibold text-emerald-400">

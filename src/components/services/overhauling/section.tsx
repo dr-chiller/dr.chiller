@@ -1,11 +1,11 @@
 import { Wrench, RefreshCcw, Repeat2 } from "lucide-react";
 
-import semi_sealed from "../../../assets/images/services/overhauling-semi-sealed-compressor.jpg";
-import oil_topup from "../../../assets/images/services/overhauling-oil-refilling.jpg";
-import rewinding from "../../../assets/images/services/overhauling-motor-winding.jpg";
-import used_parts from "../../../assets/images/services/overhauling-used-fan-parts.jpg";
-import dismantling from "../../../assets/images/services/overhauling-compressor-dismantling.jpg";
-import refurbish from "../../../assets/images/services/overhauling-compressor-refurbishing.jpg";
+import semi_sealed from "../../../assets/images/services/overhauling-semi-sealed-compressor.webp";
+import oil_topup from "../../../assets/images/services/overhauling-oil-refilling.webp";
+import rewinding from "../../../assets/images/services/overhauling-motor-winding.webp";
+import used_parts from "../../../assets/images/services/overhauling-used-fan-parts.webp";
+import dismantling from "../../../assets/images/services/overhauling-compressor-dismantling.webp";
+import refurbish from "../../../assets/images/services/overhauling-compressor-refurbishing.webp";
 
 const overhaulingServices = [
     {

@@ -1,12 +1,12 @@
 import { Wrench, Droplets, ShieldCheck, Repeat2 } from "lucide-react";
 import { PiFlowArrow } from "react-icons/pi";
 
-import ms_pipe from "../../../assets/images/services/ms-pipe.jpg";
-import pipe_insulation from '../../../assets/images/services/pipe-insulation.jpg';
-import chilled_flushing from "../../../assets/images/services/chilled-water-flushing.jpg";
-import pipe_alteration from "../../../assets/images/services/pipe-alteration-works.jpg";
-import pipe_leak from "../../../assets/images/services/chilled-water-leak.jpeg";
-import pipe_fcu from "../../../assets/images/services/chilled-water-fcu.jpg";
+import ms_pipe from "../../../assets/images/services/ms-pipe.webp";
+import pipe_insulation from '../../../assets/images/services/pipe-insulation.webp';
+import chilled_flushing from "../../../assets/images/services/chilled-water-flushing.webp";
+import pipe_alteration from "../../../assets/images/services/pipe-alteration-works.webp";
+import pipe_leak from "../../../assets/images/services/chilled-water-leak.webp";
+import pipe_fcu from "../../../assets/images/services/chilled-water-fcu.webp";
 
 const serviceItems = [
     {

@@ -1,11 +1,11 @@
 import { Wrench, Droplets, ShieldCheck, Repeat2 } from "lucide-react";
 
-import coil_replace from "../../../assets/images/services/coil-replacement.jpg";
-import anti_corrosion from "../../../assets/images/services/coil-anti-corrosion-coating.jpg";
-import gas_recovery from "../../../assets/images/services/coil-gas-recovery.jpg";
-import brazing from "../../../assets/images/services/coil-copper-brazing.jpg";
-import pressure_test from "../../../assets/images/services/coil-nitrogen-pressure-testing.jpg";
-import vacuum_charge from "../../../assets/images/services/coil-scrap.jpg";
+import coil_replace from "../../../assets/images/services/coil-replacement.webp";
+import anti_corrosion from "../../../assets/images/services/coil-anti-corrosion-coating.webp";
+import gas_recovery from "../../../assets/images/services/coil-gas-recovery.webp";
+import brazing from "../../../assets/images/services/coil-copper-brazing.webp";
+import pressure_test from "../../../assets/images/services/coil-nitrogen-pressure-testing.webp";
+import vacuum_charge from "../../../assets/images/services/coil-scrap.webp";
 
 const coilServices = [
     {

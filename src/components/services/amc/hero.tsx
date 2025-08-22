@@ -1,5 +1,5 @@
-import amc_1 from "../../../assets/images/services/amc-1.jpg";
-import amc_2 from "../../../assets/images/services/amc-2.jpg";
+import amc_1 from "../../../assets/images/services/amc-1.webp";
+import amc_2 from "../../../assets/images/services/amc-2.webp";
 
 const AMCHero = () => {
     return (

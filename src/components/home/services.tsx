@@ -3,12 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 
-import rentalImg from "../../assets/images/services/rental-ac.jpg";
-import chilledWaterImg from "../../assets/images/services/pipe-insulation.jpg";
-import maintenanceImg from "../../assets/images/services//maintenance-replacement.jpg";
-import coilImg from "../../assets/images/services/coil-anti-corrosion-coating.jpg";
-import overhaulingImg from "../../assets/images/services/overhauling-motor-winding.jpg";
-import amcImg from "../../assets/images/services/amc-contract.jpg";
+import rentalImg from "../../assets/images/services/rental-ac.webp";
+import chilledWaterImg from "../../assets/images/services/pipe-insulation.webp";
+import maintenanceImg from "../../assets/images/services//maintenance-replacement.webp";
+import coilImg from "../../assets/images/services/coil-anti-corrosion-coating.webp";
+import overhaulingImg from "../../assets/images/services/overhauling-motor-winding.webp";
+import amcImg from "../../assets/images/services/amc-contract.webp";
 
 const services = [
     {

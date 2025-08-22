@@ -35,7 +35,7 @@ const slides = [
         header: "A/C, Chiller & Genset Rentals",
         description:
             "Short and long-term rental solutions including A/C units, water chillers and diesel generators.",
-        button: "/rentals",
+        button: "/services/rentals",
         image: "/hero5.jpeg",
     },
     {
@@ -49,7 +49,7 @@ const slides = [
         header: "A/C, Chiller & Coldroom Maintenance",
         description:
             "Preventive and corrective maintenance services for air conditioning, chiller and cold room systems.",
-        button: "/products/maintenance",
+        button: "/services/maintenance",
         image: "/hero7.jpg",
     },
     {
@@ -126,10 +126,10 @@ const HomeHero = () => {
                         className="flex flex-col md:w-7/10 h-full text-white px-6 md:px-12"
                     >
                         <div className="flex-1 flex items-center gap-3">
-                            <img src="/logo.png" className="w-12 h-12 rounded-3xl" alt="Dr.Chiller Logo" />
+                            <img src="/logo-single.png" className="w-16 h-16 rounded-3xl" alt="Dr.Chiller Logo" />
                             <div>
-                                <h4 className="text-xl md:text-2xl font-bold">Dr.Chiller</h4>
-                                <span className="text-xs md:text-sm font-semibold text-emerald-400 uppercase">
+                                <h4 className="text-xl md:text-2xl font-bold">CTS - Chiller Technical Services L.L.C</h4>
+                                <span className="text-sm md:text-md font-semibold text-emerald-400 uppercase">
                                     Skill to Chill
                                 </span>
                             </div>
@@ -154,7 +154,7 @@ const HomeHero = () => {
 
                 {/* Desktop list */}
                 <div className="hidden md:flex md:w-3/10 h-full flex-col justify-end space-y-3 p-4">
-                    <div className="backdrop-blur rounded-lg p-3 pt-4 max-h-full overflow-y-auto">
+                    <div className="backdrop-blur rounded-lg p-3 pt-4 max-h-full">
                         {slides.map((slide, index) => (
                             <button
                                 key={index}

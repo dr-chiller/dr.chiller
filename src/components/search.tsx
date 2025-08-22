@@ -57,7 +57,7 @@ const NavbarSearch = () => {
                 </div>
 
                 {open && (
-                    <div className="absolute top-7 -right-15 sm:right-0 w-85">
+                    <div className="absolute top-10 -right-15 sm:right-0 w-80 sm:w-86">
                         <div className="relative">
                             <input
                                 type="text"

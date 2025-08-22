@@ -1,4 +1,4 @@
-import cooling_tower from "../../../assets/images/products/cooling-tower.jpg";
+import cooling_tower from "../../../assets/images/products/cooling-tower.webp";
 
 const HeatExchangersSubSection = () => {
     return (

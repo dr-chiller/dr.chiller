@@ -1,4 +1,4 @@
-import water_cooler from "../../../assets/images/products/water-cooler.png";
+import water_cooler from "../../../assets/images/products/water-cooler.webp";
 import heat_pump from "../../../assets/images/products/heat-pump.webp";
 
 type ProductCardProps = {

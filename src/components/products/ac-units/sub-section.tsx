@@ -1,4 +1,4 @@
-import air_curtain from "../../../assets/images/products/air-curtain.jpg";
+import air_curtain from "../../../assets/images/products/air-curtain.webp";
 
 const ACUnitsSubSection = () => {
     return (

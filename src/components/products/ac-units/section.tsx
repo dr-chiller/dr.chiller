@@ -1,9 +1,9 @@
 import { Fan, Wrench, RefreshCcw, Settings2 } from "lucide-react";
 
-import ac1 from "../../../assets/images/products/ac-units.jpg";
-import ac2 from "../../../assets/images/products/ac-temperature-range.jpg";
-import ac3 from "../../../assets/images/products/ac-cleaning-service.jpg";
-import ac4 from "../../../assets/images/products/ac-refurbishment.png";
+import ac1 from "../../../assets/images/products/ac-units.webp";
+import ac2 from "../../../assets/images/products/ac-temperature-range.webp";
+import ac3 from "../../../assets/images/products/ac-cleaning-service.webp";
+import ac4 from "../../../assets/images/products/ac-refurbishment.webp";
 
 const acUnitProducts = [
     {

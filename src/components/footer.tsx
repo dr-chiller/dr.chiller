@@ -4,13 +4,26 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="relative bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1.4fr_1.6fr] gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.6fr_1.3fr_1.6fr] gap-8">
                 {/* Brand & Description */}
                 <div>
-                    <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-4">
-                        Dr.Chiller
-                    </h2>
-                    <p className="text-sm leading-relaxed max-w-xs">
+                    <div className="flex items-center space-x-1">
+                        {/* Logo */}
+                        <div className="shrink-0">
+                            <img src="/logo-single.png" alt="Logo" className="h-12 w-12" />
+                        </div>
+
+                        {/* Text */}
+                        <div className="text-start">
+                            <p className="text-md font-medium">
+                                Chiller Technical Services L.L.C
+                            </p>
+                            <p className="text-xl font-bold" dir="rtl">
+                                خدمات التبريد التقنية ذ.م.م
+                            </p>
+                        </div>
+                    </div>
+                    <p className="text-sm leading-relaxed max-w-xs mt-4">
                         High-quality cooling and refrigeration solutions for industrial and commercial needs — built for performance, reliability, and efficiency.
                     </p>
                 </div>
@@ -101,7 +114,7 @@ const Footer = () => {
                             <MdLocationOn size={20} className="text-emerald-500" />
                             <span className="font-semibold">Address:</span>
                             <span>CTS -
-                                Chiller Technical Services LLC.<br />
+                                Chiller Technical Services L.L.C.<br />
                                 Industrial Area # 02.<br />
                                 Ajman, UAE.</span>
                         </li>

@@ -1,5 +1,5 @@
-import coil_1 from "../../../assets/images/services/coil-1.jpg";
-import coil_2 from "../../../assets/images/services/coil-2.jpg";
+import coil_1 from "../../../assets/images/services/coil-1.webp";
+import coil_2 from "../../../assets/images/services/coil-2.webp";
 
 const CoilManufacturingHero = () => {
     return (

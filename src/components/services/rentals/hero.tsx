@@ -1,5 +1,5 @@
-import rental_1 from "../../../assets/images/services/rental-1.jpeg";
-import rental_2 from "../../../assets/images/services/rental-2.jpg";
+import rental_1 from "../../../assets/images/services/rental-1.webp";
+import rental_2 from "../../../assets/images/services/rental-2.webp";
 
 const RentalsHero = () => {
     return (

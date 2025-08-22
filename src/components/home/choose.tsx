@@ -73,7 +73,7 @@ const HomeChoose = () => {
                         Why Choose Us
                     </h2>
                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                        At <span className="font-semibold text-emerald-700 dark:text-emerald-300">Dr.Chiller</span>,
+                        At <span className="font-semibold text-emerald-700 dark:text-emerald-300">CTS - Chiller Technical Services L.L.C</span>,
                         we combine years of expertise with modern technology to deliver
                         exceptional cooling solutions. Our focus is on reliability,
                         innovation, and customer satisfaction — making us the trusted

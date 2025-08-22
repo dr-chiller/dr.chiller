@@ -1,11 +1,11 @@
 import { Wrench, ShieldCheck, Repeat2 } from "lucide-react";
 
-import amc_1 from "../../../assets/images/services/amc-contract.jpg";
-import amc_2 from "../../../assets/images/services/amc-multi-sector.jpg";
-import amc_3 from "../../../assets/images/services/amc-preventive-maintenance.jpg";
-import amc_4 from "../../../assets/images/services/amc-breakdown-maintenance.jpeg";
-import amc_5 from "../../../assets/images/services/amc-priority.jpg";
-import amc_6 from "../../../assets/images/services/amc-parts-replacement.jpg";
+import amc_1 from "../../../assets/images/services/amc-contract.webp";
+import amc_2 from "../../../assets/images/services/amc-multi-sector.webp";
+import amc_3 from "../../../assets/images/services/amc-preventive-maintenance.webp";
+import amc_4 from "../../../assets/images/services/amc-breakdown-maintenance.webp";
+import amc_5 from "../../../assets/images/services/amc-priority.webp";
+import amc_6 from "../../../assets/images/services/amc-parts-replacement.webp";
 
 const amcServices = [
     {
