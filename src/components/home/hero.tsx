@@ -144,7 +144,7 @@ const HomeHero = () => {
                             </p>
                             <Link
                                 to={slides[currentIndex].button}
-                                className="inline-block px-4 py-2 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
+                                className="inline-block px-4 py-1.5 bg-emerald-500 text-black rounded-md font-semibold shadow hover:bg-emerald-600 transition"
                             >
                                 Explore
                             </Link>

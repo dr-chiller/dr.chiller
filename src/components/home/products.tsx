@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-import wc from "../../assets/images/products/water-chiller-2.webp";
+import wc from "../../assets/images/products/air-cooled-industrial-water-chiller.webp";
 import cr from "../../assets/images/products/chiller-rooms.webp";
 import he from "../../assets/images/products/heat-exchangers-1.webp";
 import ac from "../../assets/images/products/ac-units-2.webp";

@@ -6,38 +6,31 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
-/* Light theme arrows */
 .swiper-button-next,
 .swiper-button-prev {
     color: #10b981;
-    /* Tailwind emerald-500 */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     color: #059669;
-    /* emerald-600 */
     transform: scale(1.1);
 }
 
-/* Dark theme arrows */
 .dark .swiper-button-next,
 .dark .swiper-button-prev {
     color: #34d399;
-    /* emerald-400 */
 }
 
 .dark .swiper-button-next:hover,
 .dark .swiper-button-prev:hover {
     color: #6ee7b7;
-    /* emerald-300 */
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
     font-size: 1.25rem;
-    /* Adjust arrow icon size */
     font-weight: bold;
 }
 

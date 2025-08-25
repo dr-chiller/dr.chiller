@@ -117,7 +117,7 @@ const Navbar = () => {
                         <NavbarSearch />
 
                         <button onClick={toggleDark} className={`${navLink} cursor-pointer`}>
-                            {isDark ? <BiSun size={20} /> : <BiMoon size={20} />}
+                            {isDark ? <BiMoon size={20} /> : <BiSun size={20} />}
                         </button>
                         <button
                             onClick={toggleMobileMenu}
@@ -250,7 +250,7 @@ const Navbar = () => {
 
                         <div className="relative group">
                             <button onClick={toggleDark} className={`${navLink} cursor-pointer`}>
-                                {isDark ? <BiSun size={20} /> : <BiMoon size={20} />}
+                                {isDark ? <BiMoon size={20} /> : <BiSun size={20} />}
                             </button>
                             <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition pointer-events-none">
                                 Theme
