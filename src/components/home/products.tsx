@@ -77,7 +77,7 @@ const HomeProducts = () => {
                     {products.map((product, index) => (
                         <div
                             key={index}
-                            className={`bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col h-[350px] transition-all ease-out duration-200 ${isVisible
+                            className={`bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden hover:shadow-lg dark:hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col h-[380px] transition-all ease-out duration-200 ${isVisible
                                     ? "opacity-100 translate-y-0"
                                     : "opacity-40 translate-y-10"
                                 }`}
