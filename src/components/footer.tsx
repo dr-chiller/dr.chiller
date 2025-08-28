@@ -1,3 +1,4 @@
+import { BiMobile } from "react-icons/bi";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -106,6 +107,17 @@ const Footer = () => {
                                 className="hover:text-emerald-500 relative group"
                             >
                                 +971 67434537
+                                <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <BiMobile size={20} className="text-emerald-500" />
+                            <span className="font-semibold">Mobile:</span>
+                            <a
+                                href="tel:+971556700789"
+                                className="hover:text-emerald-500 relative group"
+                            >
+                                +971 556700789
                                 <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         </li>
